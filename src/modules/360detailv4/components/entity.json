@@ -1,0 +1,54 @@
+{
+  "entityid_apiname": "id",
+  "shortname_apiname": "utbl_Workitem_column16",
+  "primaryname_apiname": "utbl_Workitem_column16",
+  "secondaryname_apiname": "utbl_Workitem_column41_text",
+  "descriptionname_apiname": "utbl_Workitem_column17",
+  "basicinfo": [
+    {
+      "api_name": "utbl_Workitem_column16",
+      "icontype": "text"
+    },
+    {
+      "api_name": "utbl_Workitem_column41_text",
+      "icontype": "text"
+    },
+    {
+      "api_name": "utbl_Workitem_column30",
+      "icontype": "date"
+    }
+  ],
+  "additionalinfo": [
+    {
+      "api_name": "utbl_Workitem_column30",
+      "labeltext": "Due Date"
+    }
+  ],
+  "Generalinfo": [
+    {
+      "api_name": "utbl_Workitem_column16",
+      "labeltext": "Task Name"
+    },
+    
+    {
+      "api_name": "utbl_Workitem_column41_text",
+      "labeltext": "Project Name"
+    },
+    {
+      "api_name": "utbl_Workitem_column3_text",
+      "labeltext": "Chunk Name"
+    },
+    {
+      "api_name": "utbl_Workitem_column6_text",
+      "labeltext": "Priority"
+    },
+    {
+      "api_name": "utbl_Workitem_column10_text",
+      "labeltext": "Owner"
+    },
+    {
+      "api_name": "utbl_Workitem_column18",
+      "labeltext": "Task Progress %"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+﻿//*-----------------------------------------------
+//|   Theme Form Input Style
+//-----------------------------------------------*/
+.form-control {
+    font-size: $font-size-default;
+    color: $black;
+    border: 1px solid $grey;
+    padding: 4px;
+    .form-control &:hover {
+        border: 1px solid $grey-400;
+    }
+}

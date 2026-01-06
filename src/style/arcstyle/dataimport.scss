@@ -1,0 +1,616 @@
+@import "./main.scss";
+
+.data-import-main {
+  $statuscolor: $ArcPrimaryColor;
+
+  .dataimport-page-main {
+    .dataimport-progress {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 90px;
+
+      .RSPBprogressBar {
+        margin: 30px 0px 50px 0px;
+        background-color: #dedddf;
+        width: 80%;
+
+        .RSPBstep {
+          .indexedStep {
+            color: $statuscolor;
+            width: 24px;
+            height: 24px;
+            font-size: 20px;
+            box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 16%);
+            background-color: #ffffff;
+            position: relative;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i.icon {
+              margin: 0px;
+              line-height: 0;
+
+              &.active {
+                cursor: pointer;
+              }
+            }
+
+            span {
+              position: absolute;
+              bottom: -25px;
+              color: #939393;
+              // font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-family: $themefont;
+              font-weight: 600;
+              font-size: 14px;
+              text-align: center;
+              white-space: nowrap;
+            }
+
+            &.accomplished {
+              background-color: #ffffff;
+
+              span {
+                color: $statuscolor;
+              }
+
+              &.animation {
+                &::after,
+                &::before {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 24px;
+                  height: 24px;
+                  background: $statuscolor;
+                  border-radius: 50%;
+                  z-index: -1;
+                  animation: grow 1s ease-in-out infinite;
+                }
+
+                &::after {
+                  background: $statuscolor;
+
+                  &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100px;
+                    height: 100px;
+                    background: $statuscolor;
+                    border-radius: 50%;
+                    z-index: -1;
+                    animation: grow 1s ease-in-out infinite;
+                  }
+                }
+
+                &::before {
+                  background: $statuscolor;
+                  animation-delay: -0.5s;
+                }
+
+                @keyframes grow {
+                  0% {
+                    transform: scale(0.8, 0.8);
+                    opacity: 1;
+                  }
+
+                  100% {
+                    transform: scale(1.8, 1.8);
+                    opacity: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .RSPBprogression {
+          background: $statuscolor;
+        }
+      }
+    }
+
+    .action-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0px auto 0px auto;
+      height: 50px;
+
+      button {
+        @include Button-Default;
+        background-color: $ArcPrimaryColor;
+        padding: 5px 12px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 13px;
+        font-family: $themefont;
+        font-weight: 500;
+        // &:disabled{
+        //     display: none;
+        // }
+      }
+    }
+
+    .current-step {
+      .configure-section {
+        .loading-screen {
+          z-index: 9999;
+          margin-top: 137px;
+        }
+
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        h3.title {
+          font-family: $themefont;
+          font-weight: 600;
+          font-size: 18px;
+          margin: 0px 0px 20px 0px;
+        }
+
+        p.note {
+          color: #b3b0b0;
+          font-family: $themefont;
+          font-weight: 500;
+          font-size: 13px;
+          display: block;
+          margin: 0px 0px 15px 0px;
+        }
+
+        .arc-input-control.arc-radiobtn .radio-check-div {
+          height: auto;
+
+          label {
+            margin-top: 0px;
+          }
+        }
+
+        button.validate {
+          @include Button-Default;
+          background-color: $ArcPrimaryColor;
+          padding: 5px 20px;
+          border-radius: 2px;
+          color: #fff;
+          margin-top: 30px;
+          font-size: 13px;
+          font-family: $themefont;
+          font-weight: 500;
+        }
+      }
+
+      .preview-section {
+      }
+
+      .summary-section {
+        p.import-message {
+          margin: 0px auto 10px auto;
+          height: 30px;
+          width: fit-content;
+          border-radius: 2px;
+          padding: 2px 10px;
+          font-size: 13px;
+          font-family: $themefont;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+
+          svg {
+            font-size: 18px;
+          }
+
+          &.import-success {
+            color: #28be21;
+            background-color: #d9ffd7;
+            border: 1px solid #28be21;
+          }
+
+          &.import-faild {
+            color: #d92662;
+            border: 1px solid #d92662;
+            background-color: #fff0f0;
+          }
+
+          &.import-warning {
+            color: $ArcPrimaryColor;
+            background-color: #d7eeff;
+            border: 1px solid $ArcPrimaryColor;
+          }
+        }
+      }
+
+      .grid-table {
+        ul.nav.nav-tabs.inside-widget-tab {
+          height: 35px;
+          margin-bottom: 10px;
+          justify-content: flex-start;
+          align-items: center;
+
+          // border-bottom: 1px solid #ddd;
+          li.nav-item {
+            &:nth-child(4) {
+              margin-left: auto;
+            }
+
+            button.nav-link {
+              border: none;
+              border-bottom: 3px solid #fff;
+              padding: 0px;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              font-family: $themefont;
+              font-size: 14px;
+              margin-bottom: 0px;
+              font-weight: 600;
+              color: #000;
+
+              &.active {
+                color: $ArcPrimaryColor;
+              }
+
+              span {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                &.title-span {
+                  padding: 5px 10px;
+                }
+
+                &.count {
+                  border-radius: 5px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  background-color: $ArcPrimaryColor;
+                  color: #fff;
+                  font-size: 12px;
+                  line-height: normal;
+                  padding: 2px 6px;
+                }
+
+                &.title-btn {
+                  color: #fff;
+                  margin-left: 10px;
+                  padding: 2px 5px;
+                  font-size: 12px;
+                  font-weight: 400;
+                  border-radius: 2px;
+                  gap: 5px;
+                  background-color: #efefef;
+                  border: 1px solid #cbcbcb;
+                  color: #000;
+
+                  &.import {
+                    color: #28be21;
+                    background-color: #d9ffd7;
+                    border: 1px solid #28be21;
+                  }
+
+                  &.error {
+                    color: #d92662;
+                    border: 1px solid #d92662;
+                    background-color: #fff0f0;
+                  }
+
+                  &.warning {
+                    color: $ArcPrimaryColor;
+                    background-color: #d7eeff;
+                    border: 1px solid $ArcPrimaryColor;
+                  }
+                }
+              }
+
+              &.active {
+                border-bottom: 3px solid $ArcPrimaryColor;
+              }
+            }
+          }
+        }
+
+        &.summary-section {
+          .tab-content {
+            height: calc(
+              100vh - ($NavMainHeader + 50px + 90px + 45px + 50px + 40px)
+            );
+
+            .tab-pane {
+              .table-div {
+                .list-data-table.wj-control.wj-content.wj-flexgrid {
+                  height: calc(
+                    100vh - ($NavMainHeader + 50px + 90px + 45px + 10px + 40px)
+                  );
+                }
+              }
+            }
+          }
+          .summary-loading-section {
+            height: calc(
+              100vh - ($NavMainHeader + 50px + 90px + 45px + 50px + 40px)
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .lottie-animation {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-top: 0px;
+              .lf-player-container {
+                #lottie {
+                  width: 250px;
+                  rect {
+                    fill: transparent;
+                    @include themed() {
+                      fill: t("dark4");
+                    }
+                  }
+                }
+              }
+            }
+            button {
+              padding: 8px 14px;
+            }
+          }
+        }
+
+        .tab-content {
+          height: calc(100vh - ($NavMainHeader + 50px + 90px + 45px + 50px));
+
+          .tab-pane {
+            .table-div {
+              .arc-data-not-found {
+                margin-top: 50px;
+              }
+
+              .list-data-table.wj-control.wj-content.wj-flexgrid {
+                height: calc(
+                  100vh - ($NavMainHeader + 50px + 90px + 45px + 50px)
+                );
+
+                .wj-cells .wj-row .wj-cell .name-td .name-detail {
+                  p {
+                    cursor: default;
+                    color: #000;
+                  }
+
+                  span {
+                    cursor: default;
+                  }
+                }
+              }
+
+              .list-page-loading .data-table-loading {
+                height: calc(
+                  100vh - ($NavMainHeader + 50px + 90px + 45px + 50px)
+                );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! Popup
+.modal.arc-popup-default {
+  &.corrected-rows-upload {
+    .modal-dialog .modal-content {
+      border-radius: 10px;
+
+      .modal-body .popup-body-content {
+        position: relative;
+
+        .loading-screen {
+          height: 100%;
+          border-radius: 10px;
+          overflow: hidden;
+          backdrop-filter: blur(2px);
+          -webkit-backdrop-filter: blur(2px);
+        }
+
+        .popup-main {
+          height: auto;
+
+          label.drop-label {
+            margin: 0px;
+            height: auto;
+            outline: none;
+            box-shadow: none;
+            padding: 25px 10px;
+          }
+
+          p.info {
+            display: flex;
+            margin-top: 10px;
+            font-size: 13px;
+            font-weight: 500;
+            font-family: $themefont;
+            margin-bottom: 0px;
+            gap: 5px;
+            width: auto;
+            align-items: flex-start;
+
+            svg {
+              color: #f68094;
+              font-size: 16px;
+              margin-top: 2px;
+            }
+          }
+        }
+
+        .popup-footer {
+          justify-content: flex-end;
+
+          button {
+            &:disabled {
+              opacity: 0.4;
+            }
+          }
+        }
+      }
+    }
+
+    &.import-scheduled {
+      .modal-dialog .modal-content {
+        .modal-body .popup-body-content {
+          .popup-main {
+            p.alert-text {
+              font-size: 14px;
+              font-weight: 500;
+              font-family: $themefont;
+              margin-bottom: 0px;
+              text-align: center;
+              padding: 10px 0px;
+            }
+          }
+          .popup-footer {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+label.drop-label {
+  border: 1px dashed #ddd;
+  padding: 25px 10px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 5px;
+  background-color: #fff;
+  height: 245px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none !important;
+
+  &.invalid-file {
+    border: 1px dashed #d92662;
+  }
+
+  input {
+    outline: none;
+    border: none;
+  }
+
+  .upload-box {
+    height: auto;
+    width: 450px;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    img.xls-img {
+      width: 35px;
+      height: 35px;
+      object-fit: contain;
+    }
+
+    .upload-btn-div {
+      display: flex;
+      align-items: stretch;
+      gap: 0px;
+
+      span.reset-btn {
+        display: flex;
+        background-color: #b3b0b0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 3px;
+        border-radius: 0px 2px 2px 0px;
+        cursor: pointer;
+        color: #4d4d4d;
+
+        &:hover {
+          background-color: #b3b0b0 !important;
+        }
+      }
+    }
+
+    button {
+      @include Button-Default;
+      font-family: $themefont;
+      font-weight: 600;
+      font-size: 13px;
+
+      &.upload-btn {
+        padding: 5px 12px;
+        border-radius: 2px;
+        color: #fff;
+        background-color: $ArcSecondaryColor;
+
+        &.is-file {
+          border-radius: 2px 0px 0px 2px;
+        }
+      }
+
+      &.download-btn {
+        color: $ArcSecondaryColor;
+        padding: 0px 5px;
+      }
+    }
+
+    span.drop-here {
+      color: #b3b0b0;
+      font-family: $themefont;
+      font-weight: 500;
+      font-size: 13px;
+      display: block;
+    }
+
+    p {
+      margin: 0px;
+
+      &.download- {
+        color: #b3b0b0;
+        font-family: $themefont;
+        font-weight: 500;
+        font-size: 13px;
+        display: flex;
+      }
+
+      &.formats {
+        font-family: $themefont;
+        font-weight: 500;
+        font-size: 14px;
+        color: #abbdbe;
+        margin-top: 20px;
+      }
+    }
+
+    span.error-format {
+      font-family: $themefont;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 0px;
+      color: #d92662;
+      display: block;
+      margin-top: 0px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+    "result": {
+      "id": "8ec24fbd-fb89-427e-8529-63e5ec2612e6",
+      "name": "Default_Form_Task",
+      "groups": [
+        {
+          "id": "668970d1-9c58-43a3-8e37-0bf0749255f5",
+          "name": "Tag",
+          "seqno": 1,
+          "fields": [
+            {
+              "id": "520f2992-58a6-49f0-8021-ec264b715e59",
+              "name": "Title",
+              "lablekey": "lbl-Workitem-Title",
+              "seqno": 1,
+              "controltype": "textbox",
+              "attributedatatype": "text",
+              "api_name": "column16",
+              "table_name": "utbl_Workitem",
+              "required": true,
+              "field_read_only": true,
+              "tooltip": null,
+              "validation_rule": null,
+              "decimal_place": null,
+              "maxlength": "100",
+              "placeholder": null,
+              "default_value": null,
+              "label_text": "Title",
+              "islookup": false,
+              "masterid": "",
+              "radiogrpname": " "
+            }
+          ]
+        }
+      ]
+    }
+  }
+  

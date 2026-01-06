@@ -1,0 +1,54 @@
+﻿//*-----------------------------------------------
+//|   Theme Default Button Style
+//-----------------------------------------------*/
+
+.btn {
+    font-size: $font-size-default;
+    font-weight: $font-weight-default;
+    border: 1px solid $transparent;
+}
+
+.btn-primary {
+    background-color: $blue;
+    color: $white;
+
+    &:hover {
+        background-color: $blue-400;
+    }
+}
+
+.btn-danger {
+    background-color: $red;
+    color: $white;
+
+    &:hover {
+        background-color: $red-400;
+    }
+}
+
+.btn-success {
+    background-color: $green;
+    color: $white;
+
+    &:hover {
+        background-color: $green-400;
+    }
+}
+
+.btn-link {
+    background-color: $transparent;
+    color: $blue;
+
+    &:hover {
+        color: $blue-400;
+    }
+}
+.btn-secondary {
+    background-color: $grey;
+    color: $black;
+
+    &:hover {
+        color: $white;
+    }
+}
+

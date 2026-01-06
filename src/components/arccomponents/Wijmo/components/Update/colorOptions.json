@@ -1,0 +1,64 @@
+{
+  "Colors": [
+    {
+      "id": 1,
+      "label": "Clay Red",
+      "value": 1
+    },
+    {
+      "id": 2,
+      "label": "Mild Orange",
+      "value": 2
+    },
+    {
+      "id": 3,
+      "label": "Desert brown",
+      "value": 3
+    },
+    {
+      "id": 4,
+      "label": "Lemon yellow",
+      "value": 4
+    },
+    {
+      "id": 5,
+      "label": "Spring green",
+      "value": 5
+    },
+    {
+      "id": 6,
+      "label": "Summer green",
+      "value": 6
+    },
+    {
+      "id": 7,
+      "label": "Aqua blue",
+      "value": 7
+    },
+    {
+      "id": 8,
+      "label": "Evening blue",
+      "value": 8
+    },
+    {
+      "id": 9,
+      "label": "Mild purple",
+      "value": 9
+    },
+    {
+      "id": 10,
+      "label": "Deep purple",
+      "value": 10
+    },
+    {
+      "id": 11,
+      "label": "Baby pink",
+      "value": 11
+    },
+    {
+      "id": 12,
+      "label": "Plain grey",
+      "value": 12
+    }
+  ]
+}

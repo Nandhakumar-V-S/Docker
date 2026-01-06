@@ -1,0 +1,407 @@
+//Controller name : arclistcontroller
+//const tenantappid = 'xxxxx-xxxxx-xxxxxx-xxxxxxx'
+
+// Step 1:
+/*
+ Request :   getentityinfo (tenantappid)
+ Response : [
+  {"entityid": "1000","entityname": "lead"},
+  {"entityid": "1001","entityname": "account"}]
+*/
+
+/*
+
+  Attribute - Get all Filter data
+  
+
+  [
+
+  { 
+  "islookup" : "false", "masterid" : "1000", "mastervalue" : 
+  [{ "optionid": '100', "optionvalue": 'Qualify' },{ "optionid": '101', "optionvalue": 'Un-Qualify' }] 
+  },
+
+  { 
+  "islookup" : "true", "masterid" : "10002", "mastervalue" : 
+  [{ "userid": '100', "username": 'Annamalai' },{ "userid": '101', "optionvalue": 'Madhan' }] 
+  }
+
+  ]
+
+
+
+*/
+
+
+//Step 2
+/*
+ Request :   getentitydatasetinfo (entityid,screenid,loggeduserid)
+ Response : {
+  "entityid": "1000",
+  "entity": "lead",
+  "entityData": [
+  {"datasetid": "2000", "title": "All Leads", "isdefault" : "true", "isselected" : "true"},
+    {"datasetid": "2000", "title": "All Leads", "isdefault" : "true", "isselected" : "false"},
+  {"datasetid": "2001", "title": "My Leads", "isdefault" : "false", "isselected" : "false"},
+
+  ]
+  }
+*/
+
+//Step 3
+/*
+ Request :   getentitydatasetfieldsinfo (datasetid)
+ Response : {
+  "datasetid": "1000",
+  "title": "All Leads",
+  "Columndata": [
+    {"attributeid": "2000", "displayname": "Lead Name","dataindex": "LeadName", "ismapped" : "true"},
+    {"attributeid": "2001", "displayname": "Lead Stage","dataindex": "LeadName", "ismapped" : "true"},
+    {"attributeid": "2002", "displayname": "Owner","dataindex": "LeadName", "ismapped" : "false"}
+  ],
+
+    "filterdata": [
+    
+     { 
+     "islookup" : "false",
+     "filterid": "LeadStage", "filterdisplayname": "Lead Stage","ismapped" : "true", "isquickfilter" : "true" , "masterid" : "1000",  "keyfield": "optionid", displayfield : "optionvalue"
+     "controltype" : "select", "defaultvalue": "" , "apioutputkey" : "leadstageid", "apioutputvalue" :"optionid", 
+     "options" : [
+      { "optionid": '100', "optionvalue": 'Qualify' },
+      { "optionid": '101', "optionvalue": 'Not Reachable' },
+      { "optionid": '102', "optionvalue": 'Rejected' },
+      { "optionid": '103', "optionvalue": 'Future' },
+      { "optionid": '104', "optionvalue": 'Saved' } ] 
+     },
+     {
+      "islookup" : "false",
+      "filterid": "Leadsource", "filterdisplayname": "Lead Source","ismapped" : "true", "isquickfilter" : "true", "masterid" : "1001",  "keyfield": "optionid", displayfield : "optionvalue"
+      "controltype" : "multiselect", "defaultvalue": "" , "apioutputkey" : "leadsourceid", "apioutputvalue" :"optionid",
+      "options" : [
+      { "optionid": '200', "optionvalue": 'Internal Lead Generation' },
+      { "optionid": '201', "optionvalue": 'Web' },
+      { "optionid": '202', "optionvalue": 'ZoomInfo' },
+      { "optionid": '203', "optionvalue": 'Purchased Leads' }
+      ] 
+     },
+     {
+      "islookup" : "true",
+      "filterid": "Assignedto", "filterdisplayname": "Assigned To","ismapped" : "true", "isquickfilter" : "true", "masterid" : "1002",  "keyfield": "userid", displayfield : "username"
+      "controltype" : "multiselect", "defaultvalue": "" , "apioutputkey" : "userid", "apioutputvalue" :"username",
+      "options" : [
+      { "userid": '200', "username": 'Internal Lead Generation' },
+      { "optionid": '201', "optionvalue": 'Web' },
+      { "optionid": '202', "optionvalue": 'ZoomInfo' },
+      { "optionid": '203', "optionvalue": 'Purchased Leads' }
+      ] 
+     },
+
+     {
+      "islookup" : "",
+      "filterid": "Leadname", "filterdisplayname": "Lead Name","ismapped" : "true", "isquickfilter" : "true", "masterid" : "",  "keyfield": "", displayfield : ""
+      "controltype" : "text", "defaultvalue": "" , "apioutputkey" : "leadname", "apioutputvalue" :"",
+      "options" : []
+     },
+     {
+      "islookup" : "",
+      "filterid": "Assignedto", "filterdisplayname": "Assigned To","ismapped" : "false", "isquickfilter" : "false", "masterid" : "",  "keyfield": "", displayfield : ""
+      "controltype" : "text", "defaultvalue": "" , "apioutputkey" : "assignedtoname", "apioutputvalue" :"",
+      "options" : []
+     }
+  ],
+   "groupbydata": [
+    {"attributeid": "3000", "displayname": "Lead Name", "ismapped" : "false" ,"type" : "Vertical", "dir" : "asc" },
+    {"attributeid": "3001", "displayname": "Lead Stage", "ismapped" : "true" ,"type" : "Vertical", "dir" : "asc" },
+    {"attributeid": "3002", "displayname": "Lead Owner", "ismapped" : "false" ,"type" : "Horizontal", "dir" : "asc" },
+  ]
+  }
+
+
+
+
+  "filterdata": [
+    
+     {
+     "filterid": "LeadStage", "filterdisplayname": "Lead Stage","ismapped" : "true", "isquickfilter" : "true" , "masterid" : "1000",  "keyfield": "optionid", displayfield : "optionvalue"
+     "controltype" : "select", "defaultvalue": "" , "apioutputkey" : "leadstageid", "apioutputvalue" :"optionid", 
+     "options" : [
+      { "optionid": '100', "optionvalue": 'Qualify' },
+      { "optionid": '101', "optionvalue": 'Not Reachable' },
+      { "optionid": '102', "optionvalue": 'Rejected' },
+      { "optionid": '103', "optionvalue": 'Future' },
+      { "optionid": '104', "optionvalue": 'Saved' } ] 
+     },
+     {
+      "filterid": "Leadsource", "filterdisplayname": "Lead Source","ismapped" : "true", "isquickfilter" : "true", "masterid" : "1001",  "keyfield": "optionid", displayfield : "optionvalue"
+      "controltype" : "multiselect", "defaultvalue": "" , "apioutputkey" : "leadsourceid", "apioutputvalue" :"optionid",
+      "options" : [
+      { "optionid": '200', "optionvalue": 'Internal Lead Generation' },
+      { "optionid": '201', "optionvalue": 'Web' },
+      { "optionid": '202', "optionvalue": 'ZoomInfo' },
+      { "optionid": '203', "optionvalue": 'Purchased Leads' }
+      ] 
+     },
+     {
+      "filterid": "Leadname", "filterdisplayname": "Lead Name","ismapped" : "true", "isquickfilter" : "true", "masterid" : "",  "keyfield": "", displayfield : ""
+      "controltype" : "text", "defaultvalue": "" , "apioutputkey" : "leadname", "apioutputvalue" :"",
+      "options" : []
+     },
+     {
+      "filterid": "Assignedto", "filterdisplayname": "Assigned To","ismapped" : "false", "isquickfilter" : "false", "masterid" : "",  "keyfield": "", displayfield : ""
+      "controltype" : "text", "defaultvalue": "" , "apioutputkey" : "assignedtoname", "apioutputvalue" :"",
+      "options" : []
+     }
+  ]
+
+
+
+*/
+
+//Step 4
+/*
+  filterResult 
+  groupbyResult
+  
+  
+
+
+ Request :   getentitylistinfo (loggeduserid, filterdata, groupbydata, pagination , sorting )
+ Response : 
+  {
+  "listname" : "All Leads",
+  "totalcount" : 1500,
+  "listdata" : 
+  [ 
+   {"attributeid": "3000", "displayname": "Lead Name", "dataIndex" : "lead_name",  "type": "email" ,"icon" : "fa fa"},
+   {"attributeid": "3001", "displayname": "Lead Stage", "dataIndex" : "lead_stage",  "type": "text" ,"icon" : "fa fa log"}
+  ]
+  }
+*/
+
+//Page Config
+/*
+
+  const headerconfig = {
+    HEADER_TITLE: translate('settings'),
+    HEADERSUB_TITLE: translate('settings_list'),
+    ADD_ENTITY_ACTIONS : [
+        {
+         ACTIONBUTTON1_TITLE : translate('addleads'),
+         onClick : "handelDataTableLoad" , 
+         key : uniqueId
+        },
+        {
+         ACTIONBUTTON2_TITLE : translate('addcontact'),
+         onClick : "handlecreatepopup" , 
+         key : uniqueId
+        }]
+    MoreActions : [
+      {title : "import lead", onClick : "",sequence : 1}
+      {title : "bulk delete", onClick : "",sequence : 2}
+    }]
+  };
+
+ 
+  const datasetSubmitResult =
+
+  { 
+  "screenid": "3001",
+  "datasetname": "Team Leads", 
+  "isdefault" : "false", 
+  "isselected" : "true",
+  "sharetype":"justme" , 
+  "shareto" : "10000" ,
+  "restrictshare" : true,
+  "Columndata":[
+         {"screenfield": "2000", "sequence" : 1 },
+         {"screenfield": "2001", "sequence" : 2 } 
+  ]
+  "filterdata" : [
+         {
+  "screenfield": "2000", "filtertype" : "select",
+  "filterelement" : "Contains" , "filtervalue" : "1520"},
+   {
+  "screenfield": "2001", "filtertype" : "multiselect",
+  "filterelement" : "Contains" , "filtervalue" : "1520,5865,8456"}
+  ],
+
+  "groupbydata": [
+    {"screenfield": "2001", "type" : "Vertical", "dir" : "asc" }
+    {"screenfield": "2002", "type" : "Horizontal", "dir" : "asc" }]
+  }
+     
+  leadstageid = 1000
+  leadsoruceid = 1001
+
+ 
+  const groupResult = { "" } 
+
+ 
+  const filterResult = {
+  [
+    { "filterid": "LeadStage", "filtertype" : "select", "filterkey" :  "leadsourceid" , "filervalue" : "5000" },
+    { "filterid": "Leadsource", "filtertype" : "multiselect", "filterkey" :  "leadsourceid" , "filervalue" : "" }
+    { "filterid": "Leadname", "filtertype" : "text", "filterkey" :  "Leadname" , "filervalue" : "" }
+    { "filterid": "Assignedto", "filtertype" : "text", "filterkey" :  "Assignedto" , "filervalue" : "" }
+  ]
+  
+  
+  exec spname {'pagestart', 'pageskip', 'sortby', 'otherparameters' , leadstageid}
+  
+  otherparameters - leadstage, assignedto, modifiedon
+
+  sp output : { result : { data : [] , totalcount : 1000} 
+
+*/
+
+//Add Form
+
+/*
+export const fields = {
+  
+  
+
+
+
+  name: {
+    attributeid : 100,
+    displayname : 'Lead Name',
+    type: 'string',
+    controltype : 'text'
+    required: false,
+    disableForForm: true,
+  },
+  status: {
+    type: 'selectWithTranslation',
+    renderAsTag: true,
+    options: [
+      { value: 'draft', label: 'draft' },
+      { value: 'new', label: 'new', color: 'blue' },
+      { value: 'won', label: 'won', color: 'green' },
+      { value: 'loose', label: 'loose', color: 'red' },
+      { value: 'waiting', label: 'waiting', color: 'orange' },
+    ],
+  },
+
+  source: {
+    datatype : string , 
+    type: 'dropdown',
+    attribute : 
+    options: [
+      { value: 'linkedin', label: 'linkedin', color: 'geekblue' },
+      { value: 'twitter', label: 'twitter', color: 'cyan' },
+      { value: 'website', label: 'website', color: 'gold' },
+      { value: 'ads', label: 'ads', color: 'purple' },
+      { value: 'sales', label: 'sales', color: 'magenta' },
+    ],
+  },
+  country: {
+    type: 'country',
+    color: null,
+    disableForForm: true,
+  },
+  phone: {
+    type: 'phone',
+    disableForForm: true,
+  },
+  email: {
+    type: 'email',
+    disableForForm: true,
+  },
+  people: {
+    type: 'search',
+    label: 'people',
+    entity: 'people',
+    displayLabels: ['firstname', 'lastname'],
+    searchFields: 'firstname,lastname',
+    dataIndex: ['people', 'firstname'],
+    disableForTable: true,
+    feedback: 'people',
+  },
+  company: {
+    type: 'search',
+    label: 'company',
+    entity: 'company',
+    displayLabels: ['name'],
+    searchFields: 'name',
+    dataIndex: ['company', 'name'],
+    disableForTable: true,
+    feedback: 'company',
+  },
+};
+
+   "data_type": "email",
+   "data_type": "phone",
+*/
+
+{
+  "id": "20001",
+  "sections": [
+    {
+      "id": "39001",
+      "display_label": "Lead Information",
+      "sequence_number": 1,
+      "fields": [
+        {
+          "id": "396997000000000863",
+          "data_type": "text",
+          "sequence_number": 1,
+
+          "label_text": "Title",
+          "tooltip": null,
+          "field_read_only": true,
+          "required": false,
+          "display_label": "Title",
+          "filterable": true,
+          "visible": true,
+          "api_name": "Leadtitle",
+          "decimal_place": null,
+          "length": 120,
+          "default_value": null
+
+        }
+      ]
+    },
+    {
+      "id": "39002",
+      "display_label": "Lead Details",
+      "sequence_number": 2,
+      "fields": [
+        {
+          "id": "396997000000000863",
+          "data_type": "text",
+          "field_label": "Lead Owner",
+          "tooltip": null,
+          "field_read_only": true,
+          "required": false,
+          "display_label": "Lead Owner",
+          "filterable": true,
+          "visible": true,
+          "api_name": "Leadtitle",
+          "decimal_place": null
+        }
+      ]
+    },
+    {
+      "id": "39003",
+      "display_label": "Other Details",
+      "sequence_number": 3,
+      "fields": [
+        {
+          "id": "396997000000000863",
+          "data_type": "text",
+          "field_label": "Lead Owner",
+          "tooltip": null,
+          "field_read_only": true,
+          "required": false,
+          "display_label": "Lead Owner",
+          "filterable": true,
+          "visible": true,
+          "api_name": "Designation",
+          "decimal_place": null
+        }
+    }
+
+
+  ]
+}

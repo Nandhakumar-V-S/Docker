@@ -1,0 +1,69 @@
+/*@import './partials/rest.css';
+@import './partials/customAntd.css';
+@import './partials/layout.css';
+@import './partials/core.css';
+
+@import './partials/auth.css';
+@import './partials/navigation.css';
+@import './partials/header.css';
+@import './partials/sidePanel.css';
+@import './partials/collapseBox.css';
+@import './partials/erp.css';
+*/
+/*
+@import './../UIThemeEngine/Library/uiframeworkkit/uiframeworkkit.min.css';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import './../UIThemeEngine/Theme/globaltheme.min.css';
+*/
+
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "./arcstyle/themebtn.scss";
+@import "./arcstyle/App.scss";
+@import "./arcstyle/index.scss";
+@import "./arcstyle/menubtn.scss";
+@import "./arcstyle/header.scss";
+
+@import "./arcstyle/main.scss";
+
+@import "./arcstyle/filter-button.scss";
+
+@import "./arcstyle/404.scss";
+@import "./arcstyle/login.scss";
+@import "./arcstyle/list.scss";
+@import "./arcstyle/userdata.scss";
+@import "./arcstyle/add-contact-form.scss";
+@import "./arcstyle/360detail.scss";
+@import "./arcstyle/360detailv2.scss";
+@import "./arcstyle/360detailv3.scss";
+@import "./arcstyle/360detailv4.scss";
+@import "./arcstyle/global.scss";
+@import "./arcstyle/addleadform.scss";
+@import "./arcstyle/ArcComponents.scss";
+@import "./arcstyle/HomePage.scss";
+// @import "./arcstyle/dashboard.scss";
+@import "./arcstyle/dashboardv1.scss";
+@import "./arcstyle/loginpage.scss";
+@import "./arcstyle/dataimport.scss";
+@import "./arcstyle/adminsetting.scss";
+@import "./arcstyle/arcListHeader.scss";
+@import "./arcstyle/report.scss";
+
+@import "./arcstyle/prospecthome.scss";
+@import "./arcstyle/prospecting.scss";
+@import "./arcstyle/Prospect360.scss";
+@import "./arcstyle/Case360Details.scss";
+@import "./arcstyle//conversation.scss";
+// @import "./arcstyle/iscstyle/_wijmo.scss";
+
+/*Start theme third party Styles*/
+
+// @import "@/UIThemeEngine/Library/thirdparty/wijimo/wijmoflexgrid/wijmo-core.min.css";
+// @import "@/UIThemeEngine/Library/thirdparty/wijimo/wijmoflexgrid/wijmo.min.css";
+// @import "@/UIThemeEngine/Library/thirdparty/wijimo/wijmoflexgrid/wijmo.theme.material.amber-blue.min.css";
+// @import "_wijmo.scss";
+// @import "@/UIThemeEngine/Theme/_wijmo.scss";
+/*End theme third party Styles*/
+
+body {
+  overflow: hidden;
+}

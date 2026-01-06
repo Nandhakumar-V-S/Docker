@@ -1,0 +1,373 @@
+
+{
+    "id": "20001",
+    "sections": [
+      {
+        "id": "39001",
+        "display_label": "Lead Information",
+        "sequence_number": 1,
+        "fields": [
+          {
+            "id": "10001",
+            "controltype": "textbox",
+            "data_type": "text",
+            "sequence_number": 1,
+            "label_text": "Title",
+            "tooltip": null,
+            "field_read_only": true,
+            "required": true,
+            "display_label": "Title",
+            "filterable": true,
+            "visible": true,
+            "api_name": "leadName",
+            "decimal_place": null,
+            "length": 120,
+            "default_value": null,
+            "place_holder":"Title"
+          },
+          {
+            "id": "10002",
+            "controltype": "dropdown",
+            "data_type": "text",
+            "sequence_number": 2,
+            "label_text": "Salutation",
+            "tooltip": null,
+            "field_read_only": true,
+            "required": true,
+            "display_label": "Salutation",
+            "filterable": true,
+            "visible": true,
+            "api_name": "saluation",
+            "decimal_place": null,
+            "length": 0,
+            "default_value": null,
+            "place_holder":"Salutation",
+            "masterlist_values": [
+              {
+                "optionid": "3009",
+                "optionvalue": "Miss."
+              },
+              {
+                "optionid": "3008",
+                "optionvalue": "Mr."
+              },
+              {
+                "optionid": "3096",
+                "optionvalue": "Mrs."
+              }
+            ]
+          },
+          {
+            "id": "10003",
+            "controltype": "textbox",
+            "data_type": "text",
+            "sequence_number": 3,
+            "label_text": "First Name",
+            "tooltip": null,
+            "field_read_only": true,
+            "required": true,
+            "display_label": "First Name",
+            "filterable": true,
+            "visible": true,
+            "api_name": "firstName",
+            "decimal_place": null,
+            "length": 120,
+            "default_value": null,
+            "place_holder":"First Name"
+          },
+          {
+            "id": "10004",
+            "controltype": "textbox",
+            "data_type": "text",
+            "sequence_number": 4,
+            "label_text": "Last Name",
+            "tooltip": null,
+            "field_read_only": true,
+            "required": true,
+            "display_label": "Last Name",
+            "filterable": true,
+            "visible": true,
+            "api_name": "lastname",
+            "decimal_place": null,
+            "length": 120,
+            "default_value": null,
+            "place_holder":"Last Name"
+          },
+          {
+            "id": "10005",
+            "controltype": "textbox",
+            "data_type": "Email",
+            "sequence_number": 5,
+            "label_text": "Email",
+            "tooltip": null,
+            "field_read_only": true,
+            "required": false,
+            "display_label": "Email",
+            "filterable": true,
+            "visible": true,
+            "api_name": "email",
+            "decimal_place": null,
+            "length": 120,
+            "default_value": null,
+            "place_holder":"Email"
+          },
+          {
+            "id": "10006",
+            "controltype": "textbox",
+            "data_type": "text",
+            "sequence_number": 6,
+            "label_text": "Website",
+            "tooltip": null,
+            "field_read_only": true,
+            "required": false,
+            "display_label": "Website",
+            "filterable": true,
+            "visible": true,
+            "api_name": "webSite",
+            "decimal_place": null,
+            "length": 120,
+            "default_value": null,
+            "place_holder":"Website"
+          }
+  
+  
+        ]
+      },
+      {
+        "id": "39002",
+        "display_label": "Lead Details",
+        "sequence_number": 2,
+        "fields": [
+          {
+            "id": "10007",
+            "controltype": "dropdown",
+            "data_type": "text",
+            "sequence_number": 2,
+            "label_text": "Lead Owner",
+            "tooltip": null,
+            "field_read_only": true,
+            "required": false,
+            "display_label": "Lead Owner",
+            "filterable": true,
+            "visible": true,
+            "api_name": "assignedTo",
+            "decimal_place": null,
+            "length": 0,
+            "default_value": null,
+            "place_holder":"Lead Owner",
+            "masterlist_values": [
+              {
+                "optionid": "30106",
+                "optionvalue": "Gandhi"
+              },
+              {
+                "optionid": "30107",
+                "optionvalue": "Mark"
+              },
+              {
+                "optionid": "30109",
+                "optionvalue": "Gowtham"
+              },
+              {
+                "optionid": "30114",
+                "optionvalue": "Sudhakar"
+              },
+              {
+                "optionid": "30120",
+                "optionvalue": "Mitt"
+              }
+            ]
+          },
+          {
+            "id": "10008",
+            "controltype": "dropdown",
+            "data_type": "text",
+            "sequence_number": 2,
+            "label_text": "Lead Source",
+            "tooltip": null,
+            "field_read_only": true,
+            "required": false,
+            "display_label": "Lead Source",
+            "filterable": true,
+            "visible": true,
+            "api_name": "leadSource",
+            "decimal_place": null,
+            "length": 0,
+            "default_value": null,
+            "place_holder":"Lead Source",
+            "masterlist_values": [
+              {
+                "optionid": "3013",
+                "optionvalue": "Cold Call"
+              },
+              {
+                "optionid": "3014",
+                "optionvalue": "Existing Customer"
+              },
+              {
+                "optionid": "3015",
+                "optionvalue": "Self Generated"
+              }
+            ]
+          },
+          {
+            "id": "10009",
+            "controltype": "dropdown",
+            "data_type": "text",
+            "sequence_number": 3,
+            "label_text": "Lead Stage",
+            "tooltip": null,
+            "field_read_only": true,
+            "required": false,
+            "display_label": "Lead Stage",
+            "filterable": true,
+            "visible": true,
+            "api_name": "leadStage",
+            "decimal_place": null,
+            "length": 0,
+            "default_value": null,
+            "place_holder":"Lead Stage",
+            "masterlist_values": [
+              {
+                "optionid": "3178",
+                "optionvalue": "New Lead"
+              },
+              {
+                "optionid": "3179",
+                "optionvalue": "Qualify"
+              },
+              {
+                "optionid": "3180",
+                "optionvalue": "Bad Contact Info"
+              },
+              {
+                "optionid": "3181",
+                "optionvalue": "Converted"
+              },
+              {
+                "optionid": "3182",
+                "optionvalue": "Existing Account"
+              },
+              {
+                "optionid": "3184",
+                "optionvalue": "Nurture Uncontacted"
+              },
+              {
+                "optionid": "3176",
+                "optionvalue": "Nurture Unqualified"
+              },
+              {
+                "optionid": "3189",
+                "optionvalue": "Bad Contact Info_new"
+              }
+            ]
+          },
+          {
+            "id": "10010",
+            "controltype": "dropdown",
+            "data_type": "text",
+            "sequence_number": 4,
+            "label_text": "Lead Type",
+            "tooltip": null,
+            "field_read_only": true,
+            "required": false,
+            "display_label": "Lead Type",
+            "filterable": true,
+            "visible": true,
+            "api_name": "leadType",
+            "decimal_place": null,
+            "length": 0,
+            "default_value": null,
+            "place_holder":"Lead Type",
+            "masterlist_values": [
+              {
+                "optionid": "3054",
+                "optionvalue": "Partner."
+              },
+              {
+                "optionid": "3055",
+                "optionvalue": "Competitor"
+              },
+              {
+                "optionid": "3007",
+                "optionvalue": "Publications"
+              },
+              {
+                "optionid": "3057",
+                "optionvalue": "Reference"
+              },
+              {
+                "optionid": "3007",
+                "optionvalue": "Chennai Sales"
+              }
+            ]
+          },
+          {
+            "id": "10012",
+            "controltype": "multidropdown",
+            "data_type": "text",
+            "sequence_number": 5,
+            "label_text": "Multi Dropdown",
+            "tooltip": null,
+            "field_read_only": true,
+            "required": true,
+            "display_label": "Multi Dropdown",
+            "filterable": true,
+            "visible": true,
+            "api_name": "multidropdown",
+            "decimal_place": null,
+            "length": 0,
+            "default_value": null,
+            "place_holder":"Multi Dropdown",
+            "masterlist_values": [
+              {
+                "optionid": "3434",
+                "optionvalue": "A"
+              },
+              {
+                "optionid": "4545",
+                "optionvalue": "B"
+              },
+              {
+                "optionid": "2323",
+                "optionvalue": "C"
+              },
+              {
+                "optionid": "5432",
+                "optionvalue": "D"
+              },
+              {
+                "optionid": "4547",
+                "optionvalue": "E"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "39003",
+        "display_label": "Other Details",
+        "sequence_number": 3,
+        "fields": [
+          {
+            "id": "10011",
+            "controltype": "textarea",
+            "data_type": "text",
+            "sequence_number": 1,
+            "label_text": "Notes",
+            "tooltip": null,
+            "field_read_only": true,
+            "required": true,
+            "display_label": "Notes",
+            "filterable": true,
+            "visible": true,
+            "api_name": "Notes",
+            "decimal_place": null,
+            "length": 2500,
+            "default_value": null,
+            "place_holder":"Notes"
+          }
+        ]
+      }
+    ]
+  }

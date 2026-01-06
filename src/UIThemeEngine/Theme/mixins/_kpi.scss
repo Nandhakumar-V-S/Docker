@@ -1,0 +1,38 @@
+﻿@mixin kpi-style($kpi-bg-color) {
+    overflow: hidden;
+    position: relative;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.75);
+    display: inline-block;
+    float: left;
+    padding: 1em;
+    border-radius: 0.3em;
+    font-family: sans-serif;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    background-color: $kpi-bg-color;
+    color: $kpi-text-color;
+
+    & > .card-value {
+        display: block;
+        font-size: $kpi-font-size-count;
+        font-weight: $kpi-font-weight;
+    }
+
+    & > .card-text {
+        display: block;
+        font-size: $kpi-font-size;
+        padding-left: 0.2em;
+    }
+}
+.red {
+    @include kpi-style($red-400);
+}
+
+
+.purple {
+    @include kpi-style($purple);
+}
+
+.orange {
+    @include kpi-style($orange-200);
+}

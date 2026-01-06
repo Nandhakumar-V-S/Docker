@@ -1,0 +1,62 @@
+{
+  "result": {
+    "id": "5786e789-87a1-4af3-afb8-fa02b559370b",
+    "name": "Default_Form_Workitem",
+    "groups": [
+      {
+        "id": "6b353b75-6ef0-407d-9d43-35901b97418b",
+        "name": "General",
+        "seqno": 2,
+        "fields": [
+          {
+            "id": "dfce3481-8212-4fd6-9824-54f2db90f961",
+            "name": "Notes Status",
+            "lablekey": "lbl-Workitem-projectid",
+            "seqno": 1,
+            "controltype": "dropdown",
+            "attributedatatype": "numeric",
+            "api_name": "column4",
+            "table_name": "Utbl_Notes",
+            "required": true,
+            "field_read_only": true,
+            "tooltip": null,
+            "validation_rule": null,
+            "decimal_place": null,
+            "maxlength": "100",
+            "placeholder": null,
+            "default_value": "",
+            "label_text": "Notes Status",
+            "islookup": false,
+            "masterid": "7892",
+            "radiogrpname": "",
+            "isVisible": true
+          },
+          {
+            "id": "dfce3481-8212-4fd6-9824-54f2db90f964",
+            "name": "Project",
+            "lablekey": "lbl-Workitem-projectid",
+            "seqno": 3,
+            "controltype": "dropdown",
+            "attributedatatype": "numeric",
+            "api_name": "column42",
+            "table_name": "Utbl_Notes",
+            "required": false,
+            "field_read_only": true,
+            "tooltip": null,
+            "validation_rule": null,
+            "decimal_place": null,
+            "maxlength": "100",
+            "placeholder": null,
+            "default_value": "",
+            "label_text": "Project",
+            "islookup": true,
+            "masterid": "0462F02F-D350-4244-9B76-3CBC965207BB",
+            "radiogrpname": " ",
+            "isVisible": true,
+            "isBulkuploadproject": "444"
+          }
+        ]
+      }
+    ]
+  }
+}

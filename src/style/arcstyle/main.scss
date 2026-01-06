@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+// $themefont: ("Poppins", sans-serif);
+// $themefont: ("Montserrat", sans-serif);
+// $themefont: ("Roboto", sans-serif);
+@import "./font.scss";
+// @import "./CommonStyle.scss";
+// $themefont: $Salesforce;
+$themefont: "Lexend Deca", sans-serif;
+$themecolor: #12344d;
+// $ArcPrimaryColor: #2f5fc9;
+$PageSubHeader: 50px;
+$ArcPrimaryColor: var(--themecolor);
+// $ArcSecondaryColor: #6182ca;
+$ArcPrimaryColorBg: #d7eeff;
+$NavMainHeader: 42px;
+$PageSubHeader: 50px;
+$With-Filter: 88px;
+$Without-Filter: 45px;
+$SubHeader: 50px;
+$Groupby-height: 50px;
+$Pagination-Height: 45px;
+$Box-Shadow-Primary: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+$Border-Color1: rgba(186, 186, 186, 0.2);
+$text-color: #505050;
+$ArcPrimaryColor: var(--themecolor);
+$ArcSecondaryColor: #6182ca;
+$NavMainHeader: 42px;
+$themes: (
+  light: (
+    white: white,
+    black: black,
+  ),
+  dark: (
+    whitecolor: white,
+    blackcolor: black,
+    dark1: #070f1c,
+    dark2: #131927,
+    dark3: rgb(8 21 34),
+    dark4: #0a1929,
+    dark5: #020c16,
+    dark6: #001b36,
+    hovercolor: #bbdcfe,
+    hoverbg: #001e3c,
+    light-text: #b2bac2,
+    light-border: #ebebeb59,
+    b-color: #064d9369,
+    theme-blue: $ArcPrimaryColor,
+    none: none,
+    transparentbg: transparent,
+  ),
+);
+//! @mixin style start
+$colors: #2f5fc9, #26bf94, #5e6ab8, #0091ae, #f5b849, #23b7e5;
+
+@mixin random-color-bg {
+  // Get a random color from the list
+  $random-color: nth($colors, random(length($colors)));
+  background-color: $random-color;
+}
+@mixin random-color-color {
+  // Get a random color from the list
+  $random-color: nth($colors, random(length($colors)));
+  color: $random-color;
+}
+@mixin Button-Default {
+  border: none;
+  outline: none;
+  padding: 0px;
+  background-color: transparent;
+  box-shadow: none;
+}
+@mixin Tag-Colors {
+  &.tag-color-1 {
+    background-color: #ffd0d6;
+    color: #c82124;
+  }
+  &.tag-color-2 {
+    background-color: #fddbb5;
+    color: #a92b09;
+  }
+
+  &.tag-color-3 {
+    background-color: #e0caaa;
+    color: #761214;
+  }
+
+  &.tag-color-4 {
+    background-color: #faf2a0;
+    color: #664d00;
+  }
+
+  &.tag-color-5 {
+    background-color: #b4e5da;
+    color: #005c3f;
+  }
+
+  &.tag-color-6 {
+    background-color: #82d5c2;
+    color: #00402b;
+  }
+
+  &.tag-color-7 {
+    background-color: #dff0ff;
+    color: #12344d;
+  }
+
+  &.tag-color-8 {
+    background-color: #bbdcfe;
+    color: #12344d;
+  }
+
+  &.tag-color-9 {
+    background-color: #d6c9f0;
+    color: #221466;
+  }
+
+  &.tag-color-10 {
+    background-color: #a9a9eb;
+    color: #221466;
+  }
+
+  &.tag-color-11 {
+    background-color: #f5c4e0;
+    color: #801955;
+  }
+
+  &.tag-color-12 {
+    background-color: #dfe5ea;
+    color: #27313a;
+  }
+  &.tag-color- {
+    background-color: #dff0ff;
+    color: #000;
+  }
+  &.tag-color-undefined {
+    background-color: #dff0ff;
+    color: #000;
+  }
+}
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff;
+  background: $themecolor;
+}
+
+::selection {
+  color: #fff;
+  background: $themecolor;
+}
+
+// Layout Height

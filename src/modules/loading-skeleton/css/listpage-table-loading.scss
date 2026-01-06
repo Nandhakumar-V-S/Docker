@@ -1,0 +1,99 @@
+@import "@/style/arcstyle/main.scss";
+.react-loading-skeleton {
+  line-height: inherit;
+}
+.list-page-loading {
+  .react-loading-skeleton {
+    line-height: inherit;
+  }
+  .data-table-loading {
+    &.is-grouping {
+      height: calc(100vh - ($NavMainHeader + 50px + 80px + 45px + 12px));
+    }
+    &.with-subtask-grid {
+      height: auto;
+      overflow: auto;
+      border: none;
+      table.table {
+        thead {
+          tr {
+            th {
+              width: 25% !important;
+            }
+          }
+        }
+      }
+    }
+    &.with-task-subtask-grid {
+      height: auto;
+      overflow: auto;
+      border: none;
+      table.table {
+        thead {
+          tr {
+            th {
+              width: 100px !important;
+            }
+          }
+        }
+      }
+    }
+    height: calc(100vh - ($NavMainHeader + 50px + 47px + 45px + 12px));
+    overflow: auto;
+    overflow-y: scroll;
+    border-bottom: 1px solid #ddd;
+    @include themed() {
+      background-color: t("dark5");
+      border-color: t("b-color");
+    }
+    table.table {
+      margin: 0px;
+      border-color: #ddd;
+      @include themed() {
+        background-color: t("dark5");
+        border-color: t("b-color");
+      }
+      thead {
+        tr {
+          th {
+            @include themed() {
+              background-color: t("dark5");
+              color: t("hovercolor");
+            }
+            &:nth-child(1) {
+              width: 25%;
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            @include themed() {
+              background-color: t("dark5");
+              color: t("whitecolor");
+            }
+            .name-div {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 5px;
+              span {
+                line-height: normal;
+              }
+              .name {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .list-page-loading .data-table-loading {
+    height: calc(100vh - ($NavMainHeader + 42px + 39px + 45px + 12px));
+  }
+}

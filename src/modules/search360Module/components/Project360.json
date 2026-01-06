@@ -1,0 +1,54 @@
+{
+  "entityid_apiname": "id",
+  "shortname_apiname": "column17",
+  "primaryname_apiname": "column17",
+  "secondaryname_apiname": "column17",
+  "descriptionname_apiname": "description",
+  "basicinfo": [
+    {
+      "api_name": "column17",
+      "icontype": "text"
+    },
+    {
+      "api_name": "column10_text",
+      "icontype": "text"
+    }
+  ],
+  "additionalinfo": [
+
+    {
+      "api_name": "column4_text",
+      "labeltext": "Deliverable Type"
+    },
+    {
+      "api_name": "column38",
+      "labeltext": "Is Approval Required"
+    }
+  ],
+  "Generalinfo": [
+    {
+      "api_name": "column17",
+      "labeltext": "Project Name"
+    },
+    {
+      "api_name": "column11_text",
+      "labeltext": "Status"
+    },
+    {
+      "api_name": "column15_text",
+      "labeltext": "Priority"
+    },
+    {
+      "api_name": "column10_text",
+      "labeltext": "Project Type"
+    },
+    {
+      "api_name": "column6_text",
+      "labeltext": "Top 3 "
+    },
+    {
+      "api_name": "Utbl_Project_column41_text",
+      "labeltext": "Project Owner"
+    }
+  ]
+}

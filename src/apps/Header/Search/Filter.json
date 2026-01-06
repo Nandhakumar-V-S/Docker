@@ -1,0 +1,151 @@
+{
+  "result": {
+    "id": "5786e789-87a1-4af3-afb8-fa02b559370b",
+    "name": "Default_Form_Workitem",
+    "groups": [
+      {
+        "id": "6b353b75-6ef0-407d-9d43-35901b97418b",
+        "name": "All Results",
+        "seqno": 1,
+        "fields": [
+          {
+            "id": "1e81f030-1187-488a-b20a-6032a8b55201",
+            "name": "Title",
+            "lablekey": "lbl-Workitem-title",
+            "seqno": 1,
+            "controltype": "textbox",
+            "attributedatatype": "text",
+            "api_name": "column16",
+            "table_name": "utbl_Workitem",
+            "required": true,
+            "field_read_only": true,
+            "tooltip": null,
+            "validation_rule": null,
+            "decimal_place": null,
+            "maxlength": "100",
+            "placeholder": null,
+            "default_value": "",
+            "label_text": "Title",
+            "islookup": false,
+            "masterid": "",
+            "radiogrpname": " ",
+            "visible": false
+          }
+        ]
+      },
+      {
+        "id": "6b353b75-6ef0-407d-9d43-35901b97418b",
+        "name": "Task",
+        "seqno": 2,
+        "fields": [
+          {
+            "id": "1e81f030-1187-488a-b20a-6032a8b55201",
+            "name": "Title",
+            "lablekey": "lbl-Workitem-title",
+            "seqno": 1,
+            "controltype": "textbox",
+            "attributedatatype": "text",
+            "api_name": "column16",
+            "table_name": "utbl_Workitem",
+            "required": true,
+            "field_read_only": true,
+            "tooltip": null,
+            "validation_rule": null,
+            "decimal_place": null,
+            "maxlength": "100",
+            "placeholder": null,
+            "default_value": "",
+            "label_text": "Title",
+            "islookup": false,
+            "masterid": "",
+            "radiogrpname": " ",
+            "visible": false
+          }
+        ]
+      },
+      {
+        "id": "6b353b75-6ef0-407d-9d43-35901b97418b",
+        "name": "Follow Up",
+        "seqno": 3,
+        "fields": [
+          {
+            "id": "1e81f030-1187-488a-b20a-6032a8b55201",
+            "name": "Title",
+            "lablekey": "lbl-Workitem-title",
+            "seqno": 1,
+            "controltype": "textbox",
+            "attributedatatype": "text",
+            "api_name": "column16",
+            "table_name": "utbl_Workitem",
+            "required": true,
+            "field_read_only": true,
+            "tooltip": null,
+            "validation_rule": null,
+            "decimal_place": null,
+            "maxlength": "100",
+            "placeholder": null,
+            "default_value": "",
+            "label_text": "Title",
+            "islookup": false,
+            "masterid": "",
+            "radiogrpname": " ",
+            "visible": false
+          }
+        ]
+      },
+      {
+        "id": "6b353b75-6ef0-407d-9d43-35901b97418b",
+        "name": "Project",
+        "seqno": 2,
+        "fields": [
+          {
+            "id": "1e81f030-1187-488a-b20a-6032a8b5520",
+            "name": "Title",
+            "lablekey": "lbl-Workitem-title",
+            "seqno": 11,
+            "controltype": "textbox",
+            "attributedatatype": "text",
+            "api_name": "column16",
+            "table_name": "utbl_Workitem",
+            "required": true,
+            "field_read_only": true,
+            "tooltip": null,
+            "validation_rule": null,
+            "decimal_place": null,
+            "maxlength": "100",
+            "placeholder": null,
+            "default_value": "",
+            "label_text": "Title",
+            "islookup": false,
+            "masterid": "",
+            "radiogrpname": " ",
+            "visible": false
+          },
+          {
+            "id": "1e81f030-1187-488a-b20a-6032a8b55201",
+            "name": "Title",
+            "lablekey": "lbl-Workitem-title",
+            "seqno": 1,
+            "controltype": "textbox",
+            "attributedatatype": "text",
+            "api_name": "column16",
+            "table_name": "utbl_Workitem",
+            "required": true,
+            "field_read_only": true,
+            "tooltip": null,
+            "validation_rule": null,
+            "decimal_place": null,
+            "maxlength": "100",
+            "placeholder": null,
+            "default_value": "",
+            "label_text": "Title",
+            "islookup": false,
+            "masterid": "",
+            "radiogrpname": " ",
+            "visible": false
+          }
+        ]
+      }
+    ]
+  }
+}

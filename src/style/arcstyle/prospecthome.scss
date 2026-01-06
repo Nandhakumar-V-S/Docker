@@ -1,0 +1,131 @@
+@use "./main.scss";
+
+.list-header {
+  &.prospect-home-header {
+    .list-header-inside {
+      .action-add {
+        .toggle-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $ArcPrimaryColor;
+          padding: 3px;
+          border-radius: 2px;
+          gap: 5px;
+          width: auto;
+          margin: auto auto 0px 0px;
+          button {
+            min-width: 100px;
+            @include Button-Default;
+            background-color: transparent;
+            color: #fff;
+            font-family: $themefont;
+            font-size: 13px;
+            line-height: normal;
+            padding: 5px 20px;
+            border-radius: 2px;
+            font-weight: 400;
+            &.active {
+              color: $ArcPrimaryColor;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.prospecting-page {
+  &.prospecting-page-home {
+    // margin-top: 12px;
+    padding: 0px 0px 12px 0px;
+    padding-top: 12px;
+    .prospecting-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: #d7dbff4a;
+      padding: 6px 6px 6px 6px;
+      border-radius: 2px;
+      gap: 5px;
+      width: 100%;
+      margin: 0px 0px 12px 0px;
+      border: 3px solid #fff;
+      border-left: 12px solid #fff;
+      border-right: 12px solid #fff;
+      button {
+        min-width: 100px;
+        @include Button-Default;
+        background-color: transparent;
+        color: #333333;
+        font-family: $themefont;
+        font-size: 13px;
+        line-height: normal;
+        padding: 8px 20px;
+        border-radius: 2px;
+        font-weight: 400;
+        &.active {
+          color: #333333;
+          background-color: #fff;
+        }
+      }
+    }
+    .prospecting-widget {
+      &.activity-widget {
+        height: 915px;
+        .widget-body ul.activity-list {
+          height: calc(1050px - (40px + 12px + 24px));
+          overflow: hidden;
+          overflow-y: auto;
+        }
+      }
+    }
+    .prospectingwidget-section .main-section .task-kpi-widgrt-group {
+      .table-div.prospecting-widget {
+        ul.nav.nav-tabs {
+          border-bottom: 1px solid #ddd;
+          z-index: 2;
+          position: relative;
+          height: 42px;
+          li.nav-item {
+            button.nav-link {
+              font-family: $themefont;
+              font-size: 15px;
+              font-weight: 400;
+              border-radius: 0px;
+              border: none;
+              margin: 0px;
+              line-height: normal;
+              padding: 10px 15px;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              color: #000;
+              &.active {
+                margin: 0px;
+                color: $ArcPrimaryColor;
+                border-bottom: 3px solid $ArcPrimaryColor;
+              }
+            }
+          }
+        }
+        background-color: #fff;
+        // padding: 6px 6px 0px 6px;
+        width: 100%;
+        flex-direction: column;
+        .list-data-table.wj-control.wj-content.wj-flexgrid {
+          height: 335px;
+        }
+      }
+    }
+    .home-widget {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-top: 12px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.report-tabs-container {
+  padding: 12px 0px 12px 12px;
+  .report-tabs {
+    min-height: 200px;
+    background-color: #f7f8f9;
+    padding: 10px 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+    p {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      margin: 0;
+      font-family: $themefont;
+      font-weight: 600;
+      font-size: 15px;
+      svg {
+        font-size: 16px;
+      }
+    }
+    .nav-btns {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      button {
+        display: flex;
+        align-items: flex-start;
+        width: 400px;
+        background-color: white;
+        border: none;
+        outline: none;
+        font-family: $themefont;
+        padding: 12px;
+        border-radius: 5px;
+        font-size: 13px;
+        font-weight: 600;
+        color: black;
+        // transition: all 0.3s ease 0s;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        &:hover {
+          background: none;
+          // transition: all 0.3s ease 0s;
+          // transform: translateY(-3px);
+        }
+      }
+    }
+  }
+}

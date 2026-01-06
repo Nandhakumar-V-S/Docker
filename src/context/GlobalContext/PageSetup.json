@@ -1,0 +1,219 @@
+{
+  "Header": {
+    "Title": "ArcTicketing",
+    "Navigation": [
+      {
+        "Label": "Home",
+        "URL": "/prospecthome"
+      },
+      {
+        "Label":"Tickets",
+        "URL": "/ticket",
+        "Icon":"IoDocumentTextOutline"
+      }
+    ],
+    "QuickMenu": {
+      "Add": true,
+      "Search": true,
+      "Setting": true,
+      "Notification": true,
+      "Profile": true
+    }
+  },
+  "Pages": {
+    "ListPage": {
+      "Header": {
+        "Visibility": true,
+        "DataSetIcon": true,
+        "BackButton": {
+          "BackToLabel": "Back to import",
+          "BackToUrl": "/import"
+        },
+        "DropdownOptions": [
+          {
+            "Label": "Account",
+            "URL": "/account",
+            "Icon": "FaRegUser"
+          },
+          {
+            "Label": "Lead",
+            "URL": "/lead",
+            "Icon": "MdOutlineLeaderboard"
+          },
+          {
+            "Label": "Contact",
+            "URL": "/contact",
+            "Icon": "RiContactsBook2Line"
+          },
+          {
+            "Label": "Opportunity",
+            "URL": "/opportunity",
+            "Icon": "MdOutlineLocalOffer"
+          }
+        ],
+        "HeaderButton": {
+          "MoreAction": {
+            "Visibility": false,
+            "Label": "More Action",
+            "DropdownOptions": [
+              {
+                "Label": "Asign to",
+                "URL": "/asignto",
+                "Icon": "FaRegUser"
+              },
+              {
+                "Label": "Import Contact",
+                "URL": "/importcontact",
+                "Icon": "IoDocumentTextOutline"
+              },
+              {
+                "Label": "Change Status",
+                "URL": "/changestatus",
+                "Icon": "LiaExchangeAltSolid"
+              },
+              {
+                "Label": "Delete",
+                "URL": "/delete",
+                "Icon": "RiDeleteBinLine"
+              }
+            ]
+          },
+          "AddLead": {
+            "Visibility": true,
+            "Label": "Add Lead",
+            "Icon": "RiDeleteBinLine"
+          }
+        }
+      }
+    },
+    "Exporthistory": {
+      "Header": {
+        "Visibility": true,
+        "DataSetIcon": true,
+        "BackButton": {
+          "BackToLabel": "Back to Task",
+          "BackToUrl": "/task"
+        },
+        "DropdownOptions": [
+          {
+            "Label": "Account",
+            "URL": "/account",
+            "Icon": "FaRegUser"
+          },
+          {
+            "Label": "Lead",
+            "URL": "/lead",
+            "Icon": "MdOutlineLeaderboard"
+          },
+          {
+            "Label": "Contact",
+            "URL": "/contact",
+            "Icon": "RiContactsBook2Line"
+          },
+          {
+            "Label": "Opportunity",
+            "URL": "/opportunity",
+            "Icon": "MdOutlineLocalOffer"
+          }
+        ],
+        "HeaderButton": {
+          "MoreAction": {
+            "Visibility": false,
+            "Label": "More Action",
+            "DropdownOptions": [
+              {
+                "Label": "Asign to",
+                "URL": "/asignto",
+                "Icon": "FaRegUser"
+              },
+              {
+                "Label": "Import Contact",
+                "URL": "/importcontact",
+                "Icon": "IoDocumentTextOutline"
+              },
+              {
+                "Label": "Change Status",
+                "URL": "/changestatus",
+                "Icon": "LiaExchangeAltSolid"
+              },
+              {
+                "Label": "Delete",
+                "URL": "/delete",
+                "Icon": "RiDeleteBinLine"
+              }
+            ]
+          },
+          "AddLead": {
+            "Visibility": true,
+            "Label": "Add Lead",
+            "Icon": "RiDeleteBinLine"
+          }
+        }
+      }
+    },
+    "ComponentsPage": {
+      "Header": {
+        "Visibility": false
+      }
+    },
+    "Page360": {
+      "Header": {
+        "Visibility": true,
+        "HeaderTitle": "Task Details",
+        "Attribute360Title": "Entity Details",
+        "BackButton": {
+          "BackToLabel": "Back to Plan Viewer",
+          "BackToUrl": "/execution"
+        },
+        "HeaderButton": {
+          "Call": {
+            "title": "Call",
+            "Visibility": true
+          },
+          "Meeting": {
+            "title": "Meeting",
+            "Visibility": true
+          },
+          "MoreAction": {
+            "Visibility": false,
+            "Label": "More Action",
+            "DropdownOptions": [
+              {
+                "Label": "Asign to",
+                "URL": "/asignto",
+                "Icon": "FaRegUser"
+              },
+              {
+                "Label": "Import Contact",
+                "URL": "/importcontact",
+                "Icon": "IoDocumentTextOutline"
+              },
+              {
+                "Label": "Change Status",
+                "URL": "/changestatus",
+                "Icon": "LiaExchangeAltSolid"
+              },
+              {
+                "Label": "Delete",
+                "URL": "/delete",
+                "Icon": "RiDeleteBinLine"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "DashboardPage": {
+      "Header": {
+        "Visibility": true,
+        "HeaderTitle": "Dashboard",
+        "HeaderButton": {
+          "CreateDashboard": {
+            "title": "Create Dashboard",
+            "Visibility": true
+          }
+        }
+      }
+    }
+  }
+}

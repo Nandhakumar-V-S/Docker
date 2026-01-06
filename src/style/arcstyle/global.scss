@@ -1,0 +1,261 @@
+@import "./main.scss";
+
+.default-components {
+  .compoenents-box {
+    margin-bottom: 20px;
+    h5 {
+      font-family: $themefont;
+      font-size: 20px;
+      font-weight: 600;
+      color: #000;
+      margin: 0px 0px 20px 0px;
+    }
+    .group-buttons {
+      display: flex;
+      gap: 10px;
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        outline: none;
+        box-shadow: none;
+        font-family: $themefont;
+        font-size: 15px;
+        font-weight: 500;
+        background-color: $ArcPrimaryColor;
+        border: 1px solid $ArcPrimaryColor;
+        padding: 4px 12px;
+        border-radius: 5px;
+        color: #fff;
+        position: relative;
+        &:hover {
+          background-color: transparent;
+          color: $ArcPrimaryColor;
+        }
+      }
+    }
+  }
+  .toastify-compoenents {
+  }
+}
+// ! Notificatiopn Style start
+.Toastify {
+  .Toastify__toast-container {
+    .Toastify__toast {
+      .Toastify__toast-body {
+        align-items: flex-start;
+        .Toastify__toast-icon {
+        }
+        > div {
+          .default-notifi-content {
+            p {
+              font-family: $themefont;
+              font-size: 15px;
+              font-weight: 600;
+              color: #000;
+              margin: 0px 0px 5px 0px;
+            }
+            span {
+              font-family: $themefont;
+              font-size: 14px;
+              font-weight: 500;
+              color: #8f8f8f;
+              margin: 0px;
+              display: block;
+            }
+          }
+        }
+      }
+      button.Toastify__close-button {
+      }
+      .Toastify__progress-bar--wrp {
+        .Toastify__progress-bar--bg {
+        }
+        .Toastify__progress-bar {
+        }
+      }
+    }
+  }
+}
+
+// ! Popup Style Start
+.modal.popup-default {
+  .modal-dialog {
+    .modal-content {
+      border: none;
+      .modal-body {
+        padding: 0px;
+        .popup-body-content {
+          padding: 0px 0px 0px 0px;
+          .popup-header {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            height: 50px;
+            border-bottom: 1px solid #ddd;
+            h3 {
+              margin: 0px;
+              font-family: $themefont;
+              font-size: 18px;
+              font-weight: 600;
+              line-height: 1;
+            }
+            span.close-btn {
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              svg {
+                font-size: 17px;
+              }
+            }
+          }
+          .popup-main {
+            padding: 15px;
+            height: 100px;
+          }
+          .popup-footer {
+            padding: 15px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            height: 65px;
+            button {
+              border: none;
+              outline: none;
+              font-family: $themefont;
+              font-size: 14px;
+              font-weight: 500;
+              background-color: $ArcPrimaryColor;
+              padding: 4px 12px;
+              border-radius: 2px;
+              color: #fff;
+              width: 100px;
+              &.cancel {
+                background: linear-gradient(180deg, #fff 0, #f5f7f9 100%);
+                color: #333;
+                border: 1px solid #cfd7df;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.popup-type1 {
+  }
+}
+
+// ! off-canva-default Style Start
+.offcanvas.off-canva-default {
+  border: none;
+  .offcanvas-body {
+    padding: 0px;
+    .off-canva-body-content {
+      padding: 0px 0px 0px 0px;
+      .off-canva-header {
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        height: 50px;
+        border-bottom: 1px solid #ddd;
+        h3 {
+          margin: 0px;
+          font-family: $themefont;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 1;
+        }
+        span.close-btn {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg {
+            font-size: 17px;
+            color: #d92644;
+          }
+        }
+      }
+      .off-canva-main {
+        padding: 15px;
+        height: 100px;
+        height: calc(100vh - (50px + 65px));
+      }
+      .off-canva-footer {
+        padding: 15px;
+        border-top: 1px solid #ddd;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 15px;
+        height: 65px;
+        button {
+          border: none;
+          outline: none;
+          font-family: $themefont;
+          font-size: 14px;
+          font-weight: 500;
+          background-color: $ArcPrimaryColor;
+          padding: 4px 12px;
+          border-radius: 2px;
+          color: #fff;
+          width: 100px;
+          &.cancel {
+            background: linear-gradient(180deg, #fff 0, #f5f7f9 100%);
+            color: #333;
+            border: 1px solid #cfd7df;
+          }
+        }
+      }
+    }
+  }
+  // &.offcanvas-end {
+  //   .offcanvas-body .off-canva-body-content .off-canva-footer {
+  //     justify-content: flex-end;
+  //   }
+  // }
+
+  &.off-canva-type1 {
+  }
+}
+
+// Loading Screen
+
+.loading-screen {
+  height: calc(100vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: #ffffffad;
+  box-shadow: 0 8px 24px #959da533;
+  padding: 12px 0;
+  position: absolute;
+  z-index: 99;
+  flex-direction: column;
+  gap: 10px;
+  .spinner-border {
+    border-color: #2f5fc9;
+    border-right-color: transparent;
+  }
+  p {
+    font-family: $themefont;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+}

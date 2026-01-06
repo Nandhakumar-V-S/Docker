@@ -1,0 +1,58 @@
+{
+  "result": {
+    "id": "5786e789-87a1-4af3-afb8-fa02b559370b",
+    "name": "Default_Form_Workitem",
+    "groups": [
+      {
+        "id": "6b353b75-6ef0-407d-9d43-35901b97418b",
+        "name": "UPDATE SESSION",
+        "seqno": 0,
+        "fields": [
+          {
+            "id": "001",
+            "name": "label",
+            "lablekey": "lbl-Workitem-duedate",
+            "seqno": 1,
+            "controltype": "label-title",
+            "attributedatatype": "datetime",
+            "api_name": "column30",
+            "required": false,
+            "field_read_only": true,
+            "tooltip": null,
+            "validation_rule": null,
+            "decimal_place": null,
+            "maxlength": "100",
+            "placeholder": null,
+            "default_value": "",
+            "label_text": "Due Date",
+            "islookup": false,
+            "masterid": "",
+            "radiogrpname": " "
+          },
+          {
+            "id": "520f2992-58a6-49f0-8021-ec264b715e59",
+            "name": "Session",
+            "lablekey": "lbl-Assignment-session",
+            "seqno": 2,
+            "controltype": "multiselect",
+            "attributedatatype": "numeric",
+            "api_name": "column4",
+            "table_name": "utbl_Assignment",
+            "required": false,
+            "field_read_only": true,
+            "tooltip": null,
+            "validation_rule": null,
+            "decimal_place": null,
+            "maxlength": "100",
+            "placeholder": null,
+            "default_value": null,
+            "label_text": "Session",
+            "islookup": false,
+            "masterid": "8000",
+            "radiogrpname": " "
+          }
+        ]
+      }
+    ]
+  }
+}

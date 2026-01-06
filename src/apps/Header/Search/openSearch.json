@@ -1,0 +1,16 @@
+{
+  "Task": [
+    { "left_title1": "Title", "Tooltip": "Title" },
+    { "left_title2": "DueDate", "Tooltip": "DueDate" },
+    { "left_title3": "Assignedto", "Tooltip": "Assignedto" },
+    { "right_title1": "Owner", "Tooltip": "Createdby" },
+    { "right_title2": "ModifiedOn", "Tooltip": "ModifiedOn" }
+  ],
+  "Project": [
+    { "left_title1": "Title", "Tooltip": "Title" },
+    { "left_title2": "", "Tooltip": "" },
+    { "left_title3": "", "Tooltip": "" },
+    { "right_title1": "Createdby", "Tooltip": "Createdby" },
+    { "right_title2": "ModifiedOn", "Tooltip": "ModifiedOn" }
+  ]
+}

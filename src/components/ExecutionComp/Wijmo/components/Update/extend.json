@@ -1,0 +1,102 @@
+{
+  "result": {
+    "id": "5786e789-87a1-4af3-afb8-fa02b559370b",
+    "name": "Default_Form_Workitem",
+    "groups": [
+      {
+        "id": "6b353b75-6ef0-407d-9d43-35901b97418b",
+        "name": "EXTEND PLAN",
+        "seqno": 0,
+        "fields": [
+          {
+            "id": "001",
+            "name": "label",
+            "lablekey": "lbl-Workitem-duedate",
+            "seqno": 1,
+            "controltype": "label-title",
+            "attributedatatype": "datetime",
+            "api_name": "column30",
+            "required": false,
+            "field_read_only": true,
+            "tooltip": null,
+            "validation_rule": null,
+            "decimal_place": null,
+            "maxlength": "100",
+            "placeholder": null,
+            "default_value": null,
+            "label_text": "Due Date",
+            "islookup": false,
+            "masterid": "",
+            "radiogrpname": " "
+          },
+          {
+            "id": "2a6721ef-3bbe-419b-8cdf-ddc026bd1841",
+            "name": "To Date",
+            "lablekey": "lbl-Assignment-Date",
+            "seqno": 1,
+            "controltype": "date",
+            "attributedatatype": "date",
+            "api_name": "column30",
+            "table_name": "utbl_Assignment",
+            "required": true,
+            "field_read_only": false,
+            "tooltip": null,
+            "validation_rule": null,
+            "decimal_place": null,
+            "maxlength": "100",
+            "placeholder": null,
+            "default_value": "",
+            "label_text": "To Date",
+            "islookup": false,
+            "masterid": "",
+            "radiogrpname": " "
+          },
+          {
+            "id": "b99dbcb8-0f7e-4cc8-8b95-e3c48b60f6e5",
+            "name": "Reason Code",
+            "lablekey": "lbl-Assignment-Reason",
+            "seqno": 2,
+            "controltype": "dropdown",
+            "attributedatatype": "numeric",
+            "api_name": "column7",
+            "table_name": "utbl_Assignment",
+            "required": false,
+            "field_read_only": false,
+            "tooltip": null,
+            "validation_rule": null,
+            "decimal_place": null,
+            "maxlength": "100",
+            "placeholder": null,
+            "default_value": "",
+            "label_text": "Reason Code",
+            "islookup": false,
+            "masterid": "8003",
+            "radiogrpname": " "
+          },
+          {
+            "id": "b99dbcb8-0f7e-4cc8-8b95-e3c48b60f6e9",
+            "name": "Reason Description",
+            "lablekey": "lbl-Assignment-Reasondes",
+            "seqno": 3,
+            "controltype": "Textarea",
+            "attributedatatype": "text",
+            "api_name": "column16",
+            "table_name": "utbl_Assignment",
+            "required": false,
+            "field_read_only": false,
+            "tooltip": null,
+            "validation_rule": null,
+            "decimal_place": null,
+            "maxlength": "100",
+            "placeholder": null,
+            "default_value": "",
+            "label_text": "Reason Description",
+            "islookup": false,
+            "masterid": "",
+            "radiogrpname": " "
+          }
+        ]
+      }
+    ]
+  }
+}

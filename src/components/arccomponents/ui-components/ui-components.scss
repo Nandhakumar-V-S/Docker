@@ -1,0 +1,784 @@
+@import "../../../style/arcstyle/main.scss";
+
+.ui-components {
+  height: calc(100vh - 55px);
+  overflow: auto;
+  padding: 20px 0px;
+  .row {
+    padding: 20px 0px;
+    border-bottom: 1px solid #ddd;
+    &:first-child {
+      padding-top: 0px;
+    }
+    &:last-child {
+      border: none;
+    }
+  }
+  h3.custom-component-title {
+    margin: 15px 0px;
+    font-family: $themefont;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+  }
+  .toastify-compoenents .group-buttons {
+    display: flex;
+    gap: 10px;
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      outline: none;
+      box-shadow: none;
+      font-family: $themefont;
+      font-size: 15px;
+      font-weight: 500;
+      background-color: $ArcPrimaryColor;
+      border: 1px solid $ArcPrimaryColor;
+      padding: 4px 12px;
+      border-radius: 5px;
+      color: #fff;
+      position: relative;
+      &:hover {
+        background-color: transparent;
+        color: $ArcPrimaryColor;
+      }
+    }
+  }
+}
+
+.arc-input-control {
+  margin: 15px 0px;
+  display: flex;
+  flex-direction: column;
+  label {
+    &.form-label {
+      margin: 0px 0px 5px 0px;
+      font-family: $themefont;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: normal;
+    }
+    sup {
+      color: red;
+      font-size: 12px;
+      display: contents;
+    }
+  }
+  &.arc-textbox {
+    input {
+      height: 38px;
+      font-family: $themefont;
+      font-size: 13px;
+      font-weight: 500;
+      box-shadow: none;
+      border-radius: 0px;
+      border-color: #ddd;
+      &:focus {
+        border-color: #ddd;
+      }
+    }
+  }
+  &.arc-singleselect {
+    .select-div {
+      .add-contact-select__control {
+        border: 1px solid #ddd;
+        box-shadow: none;
+        // min-height: 35px;
+        // height: 35px;
+        font-family: $themefont;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: 0px;
+        &:hover {
+          border-color: #ddd;
+        }
+        .add-contact-select__value-container {
+          // height: 35px;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          .add-contact-select__input-container {
+            font-family: $themefont;
+            font-size: 13px;
+            font-weight: 500;
+            // height: 35px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+          }
+          .add-contact-select__placeholder {
+            font-family: $themefont;
+            font-size: 13px;
+            font-weight: 500;
+            //   height: 35px;
+          }
+        }
+      }
+      .add-contact-select__menu {
+        // position: relative;
+        font-family: $themefont;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: 0px;
+        .add-contact-select__menu-list {
+          padding: 5px;
+          .add-contact-select__option {
+            font-family: $themefont;
+            font-size: 13px;
+            cursor: pointer;
+          }
+          .add-contact-select__menu-notice {
+            font-family: $themefont;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+  &.arc-custom-multiselect {
+    .select-div {
+      .arc-custom-multi-select__control {
+        border: 1px solid #ddd;
+        box-shadow: none;
+        // min-height: 35px;
+        // height: 35px;
+        font-family: $themefont;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: 0px;
+        max-height: 38px;
+        overflow: auto;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        &:hover {
+          border-color: #ddd;
+        }
+        .arc-custom-multi-select__value-container {
+          // height: 35px;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          .arc-custom-multi-select__input-container {
+            font-family: $themefont;
+            font-size: 13px;
+            font-weight: 500;
+            // height: 35px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+          }
+          .arc-custom-multi-select__placeholder {
+            font-family: $themefont;
+            font-size: 13px;
+            font-weight: 500;
+            //   height: 35px;
+          }
+        }
+        .arc-custom-multi-select__indicators {
+          align-items: flex-start;
+          .arc-custom-multi-select__indicator-separator {
+            display: none;
+          }
+          .arc-custom-multi-select__dropdown-indicator {
+            display: none;
+          }
+        }
+      }
+      .arc-custom-multi-select__menu {
+        // position: relative;
+        font-family: $themefont;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: 0px;
+        // border: none;
+        // box-shadow: none;
+        scrollbar-width: thin;
+        // border-bottom: 1px solid #ddd;
+        .arc-custom-multi-select__menu-list {
+          padding: 5px;
+          display: flex;
+          flex-direction: column;
+          gap: 0px;
+          //   border: none;
+          scrollbar-width: thin;
+          max-height: 200px;
+          > div:first-child .arc-custom-multi-select__option {
+            // border-bottom: 1px solid #ddd;
+            width: fit-content;
+            label {
+              color: $ArcPrimaryColor;
+              border-bottom: 1px solid $ArcPrimaryColor;
+            }
+            input {
+              display: none;
+            }
+          }
+
+          .arc-custom-multi-select__option {
+            font-family: $themefont;
+            font-size: 13.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            // padding-left: 0px;
+            // padding-right: 0px;
+            // padding: 5px 0px;
+
+            input {
+              height: 15px;
+              width: 15px;
+              border-radius: 0px;
+              cursor: pointer;
+            }
+            label {
+              cursor: pointer;
+            }
+            &.arc-custom-multi-select__option--is-selected {
+              background-color: transparent;
+              color: #000;
+            }
+            &.arc-custom-multi-select__option--is-focused {
+              background-color: transparent;
+              color: #000;
+            }
+          }
+          .arc-custom-multi-select__menu-notice {
+            font-family: $themefont;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+  &.arc-multiselect-create {
+    .select-div {
+      .multi-select__control {
+        border: 1px solid #ddd;
+        box-shadow: none;
+        border-radius: 0px;
+        &:hover {
+          border-color: #ddd;
+        }
+        .multi-select__value-container {
+          .multi-select__multi-value {
+            font-family: $themefont;
+            font-size: 14px;
+            font-weight: 500;
+          }
+          .multi-select__placeholder {
+            font-family: $themefont;
+            font-size: 13px;
+            font-weight: 500;
+          }
+        }
+      }
+      .multi-select__menu {
+        // position: relative;
+        font-family: $themefont;
+        font-size: 13px;
+        font-weight: 500;
+      }
+    }
+  }
+  &.arc-textarea {
+    textarea {
+      font-family: $themefont;
+      font-size: 13px;
+      font-weight: 500;
+      box-shadow: none;
+      border-radius: 0px;
+      border-color: #ddd;
+      min-height: 37px;
+      height: 37px;
+      &:focus {
+        border-color: #ddd;
+      }
+    }
+  }
+  &.arc-fileselect {
+    input {
+      height: 38px;
+      font-family: $themefont;
+      font-size: 13px;
+      font-weight: 500;
+      box-shadow: none;
+      border-radius: 0px;
+      border-color: #ddd;
+      &:focus {
+        border-color: #ddd;
+      }
+      &[type="file"] {
+        height: auto;
+        line-height: 1.8;
+      }
+    }
+  }
+  &.arc-datepicker {
+    input {
+      height: 38px;
+      font-family: $themefont;
+      font-size: 13px;
+      font-weight: 500;
+      box-shadow: none;
+      border-radius: 0px;
+      border-color: #ddd;
+      &:focus {
+        border-color: #ddd;
+      }
+      &.date-input {
+        border: 1px solid #ddd;
+        width: 100%;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+    .react-datepicker-wrapper {
+      .react-datepicker__input-container .react-datepicker__calendar-icon {
+        padding: 0px;
+        top: 50%;
+        left: 5px;
+        transform: translate(0%, -50%);
+        font-size: 16px;
+      }
+    }
+    .react-datepicker__tab-loop {
+      .react-datepicker {
+        font-family: $themefont;
+        font-size: 13px;
+        font-weight: 500;
+      }
+    }
+  }
+  &.arc-radiobtn {
+    .radio-check-div {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      justify-content: flex-start;
+      height: 35px;
+      label {
+        cursor: pointer;
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-family: $themefont;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: normal;
+        input {
+          height: 15px;
+          width: 15px;
+          &[type="radio"] {
+            height: 15px;
+            width: 15px;
+            appearance: none;
+            -webkit-appearance: none;
+            background: #e8e8e8;
+            border: 4px solid #fff;
+            outline: 1px solid #999;
+            border-radius: 50%;
+            height: 16px;
+            width: 16px;
+            font-size: 13px;
+            font-weight: 500;
+            box-shadow: none;
+            &:checked {
+              background: #fff;
+              border: 4px solid $ArcPrimaryColor;
+              outline: 2px solid $ArcPrimaryColor;
+              outline-offset: -1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! Popup Style Start
+.modal.arc-popup-default {
+  .modal-dialog {
+    .modal-content {
+      border: none;
+      .modal-body {
+        padding: 0px;
+        .popup-body-content {
+          padding: 0px 0px 0px 0px;
+          .popup-header {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            height: 50px;
+            border-bottom: 1px solid #ddd;
+            h3 {
+              margin: 0px;
+              font-family: $themefont;
+              font-size: 18px;
+              font-weight: 600;
+              line-height: 1;
+            }
+            span.close-btn {
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              svg {
+                font-size: 17px;
+              }
+            }
+          }
+          .popup-main {
+            padding: 15px;
+            height: 100px;
+            align-items: flex-start;
+          }
+          .popup-footer {
+            padding: 15px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            height: 65px;
+            button {
+              border: none;
+              outline: none;
+              font-family: $themefont;
+              font-size: 14px;
+              font-weight: 500;
+              background-color: $ArcPrimaryColor;
+              padding: 4px 12px;
+              border-radius: 2px;
+              color: #fff;
+              width: 100px;
+              &.cancel {
+                background: linear-gradient(180deg, #fff 0, #f5f7f9 100%);
+                color: #333;
+                border: 1px solid #cfd7df;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.popup-type1 {
+  }
+}
+
+// ! off-canva-default Style Start
+.offcanvas.arc-off-canva-default {
+  border: none;
+  .offcanvas-body {
+    padding: 0px;
+    .off-canva-body-content {
+      padding: 0px 0px 0px 0px;
+      .off-canva-header {
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        height: 50px;
+        border-bottom: 1px solid #ddd;
+        h3 {
+          margin: 0px;
+          font-family: $themefont;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 1;
+        }
+        span.close-btn {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg {
+            font-size: 17px;
+          }
+        }
+      }
+      .off-canva-main {
+        padding: 15px;
+        height: 100px;
+        height: calc(100vh - (50px + 65px));
+      }
+      .off-canva-footer {
+        padding: 15px;
+        border-top: 1px solid #ddd;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 15px;
+        height: 65px;
+        button {
+          border: none;
+          outline: none;
+          font-family: $themefont;
+          font-size: 14px;
+          font-weight: 500;
+          background-color: $ArcPrimaryColor;
+          padding: 4px 12px;
+          border-radius: 2px;
+          color: #fff;
+          width: 100px;
+          &.cancel {
+            background: linear-gradient(180deg, #fff 0, #f5f7f9 100%);
+            color: #333;
+            border: 1px solid #cfd7df;
+          }
+        }
+      }
+    }
+  }
+  // &.offcanvas-end {
+  //   .offcanvas-body .off-canva-body-content .off-canva-footer {
+  //     justify-content: flex-end;
+  //   }
+  // }
+
+  &.off-canva-type1 {
+  }
+}
+
+.arc-tab-content {
+  ul.nav.nav-tabs {
+    border-bottom: 1px solid #ddd;
+    z-index: 2;
+    position: relative;
+    height: 42px;
+    li.nav-item {
+      button.nav-link {
+        font-family: $themefont;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 0px;
+        border: none;
+        margin: 0px;
+        line-height: normal;
+        padding: 10px 15px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: #000;
+        &.active {
+          margin: 0px;
+          color: $ArcPrimaryColor;
+          border-bottom: 3px solid $ArcPrimaryColor;
+        }
+      }
+    }
+  }
+  .tab-content {
+    height: calc(100% - 42px);
+    overflow: auto;
+    background-color: #ebeff3;
+    .tab-main-content {
+      padding: 15px;
+      margin: 6px;
+      background-color: #fff;
+      border-radius: 5px;
+      p {
+        font-family: $themefont;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0px;
+      }
+    }
+  }
+}
+
+.arc-dropdown {
+  margin: 5px 0px;
+  .dropdown {
+    button.dropdown-toggle {
+      &::after {
+        display: none;
+      }
+      border: none;
+      outline: none;
+      background-color: transparent;
+      font-family: $themefont;
+      font-size: 13px;
+      padding: 0px;
+      font-weight: 500;
+      background-color: #fff;
+      padding: 6px 12px;
+      border-radius: 2px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background-color: $ArcPrimaryColor;
+      border-radius: 5px;
+      border: 1px solid $ArcPrimaryColor;
+      span {
+        padding-left: 5px;
+        display: block;
+        border-left: 1px solid #a7a2a2;
+        svg {
+          font-size: 18px;
+        }
+      }
+      &:hover {
+        background: none;
+        background-color: transparent;
+        color: $ArcPrimaryColor;
+        span {
+          border-left: 1px solid $ArcPrimaryColor;
+        }
+      }
+    }
+    .dropdown-menu {
+      padding: 10px;
+      input {
+        box-shadow: none;
+        height: 35px;
+        font-family: $themefont;
+        font-size: 13.5px;
+        font-weight: 500;
+        border-radius: 0px;
+        margin-bottom: 5px;
+      }
+      .dropdown-item {
+        font-family: $themefont;
+        font-size: 14px;
+        border-radius: 0px;
+        font-weight: 500;
+        padding: 5px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        svg {
+          font-size: 16px;
+        }
+        &:hover {
+          background-color: $ArcPrimaryColor;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.arc-dropdown-type-1 {
+  margin: 5px 0px;
+  display: flex;
+  align-items: center;
+  span.status-color {
+    height: 10px;
+    width: 10px;
+    display: block;
+    border-radius: 50%;
+    background-color: $ArcPrimaryColor;
+  }
+  .dropdown {
+    button.dropdown-toggle {
+      padding: 0px 5px;
+      width: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      background-color: transparent;
+      font-family: $themefont;
+      font-size: 14px;
+      font-weight: 600;
+      color: #000;
+      border-radius: 5px;
+    }
+    .dropdown-menu {
+      padding: 5px;
+      input {
+        box-shadow: none;
+        height: 35px;
+        font-family: $themefont;
+        font-size: 13.5px;
+        font-weight: 500;
+        border-radius: 0px;
+        margin-bottom: 5px;
+      }
+      .dropdown-item {
+        font-family: $themefont;
+        font-size: 14px;
+        border-radius: 0px;
+        font-weight: 500;
+        padding: 5px;
+        &:hover {
+          background-color: $ArcPrimaryColor;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.arc-accordion {
+  .accordion {
+    .accordion-item {
+      .accordion-header {
+        button {
+          font-family: $themefont;
+          font-size: 15px;
+          //   border-radius: 0px;
+          font-weight: 500;
+          padding: 10px;
+          border: none;
+          box-shadow: none;
+          background-color: transparent;
+          color: #000;
+          gap: 10px;
+
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #000;
+            svg {
+              color: #000;
+
+              font-size: 18px;
+            }
+          }
+          &::after {
+            display: none;
+          }
+        }
+        &.active {
+          button {
+            background-color: $ArcPrimaryColor;
+            color: #fff;
+            span {
+              border: 1px solid #fff;
+              svg {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+      .accordion-collapse {
+        .accordion-body {
+          padding: 10px;
+          p {
+            font-family: $themefont;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0px;
+          }
+        }
+      }
+    }
+  }
+}

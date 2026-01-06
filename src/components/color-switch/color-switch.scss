@@ -1,0 +1,89 @@
+@import "../../style/arcstyle/main.scss";
+
+.color-switch {
+  z-index: 99;
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  right: auto;
+  top: auto;
+  button.color-switch-btn {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: $themecolor;
+    svg {
+      font-size: 30px;
+      color: #fff;
+    }
+  }
+}
+
+#popover-theme-color {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border: none;
+  .popover-arrow {
+    &::after {
+      border-top-color: #fff;
+    }
+    &::before {
+      border-top-color: rgb(0 0 0 / 6%);
+    }
+  }
+  .popover-body {
+    p {
+      padding: 0px;
+      font-family: $themefont;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 10px;
+      color: #0d0620;
+    }
+    .color-btn-group {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      button {
+        height: 35px;
+        width: 35px;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        border-radius: 5px;
+        svg {
+          color: #fff;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+#popover-theme-color.dark-theme {
+  background-color: #0d0620;
+  box-shadow: 0px 0px 3px 0px #2c2267;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  .popover-arrow {
+    &::after {
+      border-top-color: #0d0620;
+    }
+    &::before {
+      border-top-color: rgb(26 18 76);
+    }
+  }
+  .popover-body {
+    p {
+      color: #fff;
+    }
+  }
+}

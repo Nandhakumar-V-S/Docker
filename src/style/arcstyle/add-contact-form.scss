@@ -1,0 +1,433 @@
+@import "./main.scss";
+.offcanvas.add-contact-form-canva {
+  border: none;
+  width: 450px;
+  $HeaderHeight: 50px;
+  $FooterHeight: 65px;
+  .offcanvas-body {
+    padding: 0px;
+    .header-content {
+      padding: 15px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      height: $HeaderHeight;
+      h3 {
+        margin: 0px;
+        font-family: $themefont;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1;
+      }
+      .view-option {
+        margin-left: auto;
+        button {
+          border: none;
+          outline: none;
+          box-shadow: none;
+          background-color: transparent;
+          padding: 0px 0px 0px 0px;
+          font-family: $themefont;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 1;
+          color: #b7b1b1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          svg {
+            font-size: 17px;
+            color: #b7b1b1;
+            margin-top: -3px;
+          }
+          &.active {
+            color: $ArcPrimaryColor;
+            svg {
+              color: $ArcPrimaryColor;
+            }
+          }
+        }
+      }
+      span {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          font-size: 17px;
+          color: #d92644;
+        }
+      }
+    }
+    .main-content {
+      padding: 15px 15px;
+      border-top: 1px solid #ddd;
+      height: calc(100vh - ($HeaderHeight + $FooterHeight));
+      overflow: auto;
+      // overflow-y: scroll;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        &.group-form-enable {
+          gap: 25px;
+          .accordion {
+            border-bottom: 1px solid #ddd;
+            padding: 0px 0px 25px 0px;
+            &:last-child {
+              padding: 0px;
+              border: none;
+            }
+            .form-group {
+              .accordion-collapse {
+                &.collapse:not(.show) {
+                  display: none;
+                }
+                .input-control {
+                  &:first-child {
+                    margin-top: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .form-group {
+          .accordion-collapse.collapse:not(.show) {
+            display: block;
+          }
+          button.group-title {
+            &.active {
+              margin: 0px 0px 0px 0px;
+            }
+            margin: 0px 0px 0px 0px;
+            width: 100%;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            padding: 0px;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h4 {
+              font-family: $themefont;
+              font-size: 16px;
+              font-weight: 600;
+              line-height: 1;
+              margin: 0px;
+            }
+            span {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              svg {
+                font-size: 18px;
+                transform: rotate(0deg);
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+              }
+            }
+            &.active {
+              span {
+                svg {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+          }
+
+          .input-control {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            &:last-child {
+              margin-bottom: 0px;
+            }
+            label {
+              &.form-label {
+                margin: 0px 0px 5px 0px;
+                font-family: $themefont;
+                font-size: 13px;
+                font-weight: 600;
+                line-height: normal;
+              }
+              sup {
+                color: red;
+                font-size: 12px;
+                display: contents;
+              }
+            }
+            input {
+              height: 38px;
+              font-family: $themefont;
+              font-size: 13px;
+              font-weight: 500;
+              box-shadow: none;
+              border-radius: 0px;
+              border-color: #ddd;
+              &:focus {
+                border-color: #ddd;
+              }
+              &[type="file"] {
+                height: auto;
+                line-height: 1.8;
+              }
+              &.date-input {
+                border: 1px solid #ddd;
+                width: 100%;
+                outline: none;
+                box-shadow: none;
+              }
+            }
+            .react-datepicker-wrapper {
+              .react-datepicker__input-container
+                .react-datepicker__calendar-icon {
+                padding: 0px;
+                top: 50%;
+                left: 5px;
+                transform: translate(0%, -50%);
+              }
+            }
+            .react-datepicker__tab-loop {
+              .react-datepicker {
+                font-family: $themefont;
+                font-size: 13px;
+                font-weight: 500;
+              }
+            }
+            textarea {
+              font-family: $themefont;
+              font-size: 13px;
+              font-weight: 500;
+              box-shadow: none;
+              border-radius: 0px;
+              border-color: #ddd;
+              &:focus {
+                border-color: #ddd;
+              }
+            }
+            .radio-check-div {
+              display: flex;
+              align-items: center;
+              gap: 30px;
+              justify-content: flex-start;
+              label {
+                margin-top: 5px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-family: $themefont;
+                font-size: 13px;
+                font-weight: 500;
+                line-height: normal;
+                input {
+                  height: 15px;
+                  width: 15px;
+                }
+              }
+            }
+            .invalid-feedback,
+            .validation-select {
+              font-family: $themefont;
+              font-size: 13px;
+              font-weight: 500;
+              color: #dc3545;
+              width: 100%;
+              margin-top: 0.25rem;
+              line-height: normal;
+            }
+            select.form-select {
+              // height: 35px;
+              font-family: $themefont;
+              font-size: 13px;
+              font-weight: 500;
+              box-shadow: none;
+              border-radius: 0px;
+              border-color: #ddd;
+              &:focus {
+                border-color: #ddd;
+              }
+              option {
+                cursor: pointer;
+              }
+            }
+            .select-div {
+              .add-contact-select__control {
+                border: 1px solid #ddd;
+                box-shadow: none;
+                // min-height: 35px;
+                // height: 35px;
+                font-family: $themefont;
+                font-size: 13px;
+                font-weight: 500;
+                border-radius: 0px;
+                &:hover {
+                  border-color: #ddd;
+                }
+                .add-contact-select__value-container {
+                  // height: 35px;
+                  padding-top: 0px;
+                  padding-bottom: 0px;
+                  .add-contact-select__input-container {
+                    font-family: $themefont;
+                    font-size: 13px;
+                    font-weight: 500;
+                    // height: 35px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                  }
+                  .add-contact-select__placeholder {
+                    font-family: $themefont;
+                    font-size: 13px;
+                    font-weight: 500;
+                    //   height: 35px;
+                  }
+                }
+              }
+              .add-contact-select__menu {
+                // position: relative;
+                font-family: $themefont;
+                font-size: 13px;
+                font-weight: 500;
+                // margin: 20px 0px;
+              }
+              .add-contact-select__menu {
+                border-radius: 0px;
+                .add-contact-select__menu-list {
+                  padding: 5px;
+                  .add-contact-select__option {
+                    font-family: $themefont;
+                    font-size: 13px;
+                    cursor: pointer;
+                  }
+                  .add-contact-select__menu-notice {
+                    font-family: $themefont;
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer-content {
+      padding: 15px;
+      border-top: 1px solid #ddd;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 15px;
+      height: $FooterHeight;
+      button {
+        border: none;
+        outline: none;
+        font-family: $themefont;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: $ArcPrimaryColor;
+        padding: 4px 12px;
+        border-radius: 2px;
+        color: #fff;
+        width: 100px;
+        &:disabled {
+          background-color: $ArcSecondaryColor;
+          cursor: no-drop;
+        }
+        &.cancel {
+          background: linear-gradient(180deg, #fff 0, #f5f7f9 100%);
+          color: #333;
+          border: 1px solid #cfd7df;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .offcanvas.add-contact-form-canva {
+    width: 320px;
+    .offcanvas-body {
+      .header-content {
+        h3 {
+          font-size: 16px;
+        }
+        .view-option button {
+          font-size: 13px;
+          svg {
+            font-size: 16px;
+          }
+        }
+      }
+      .main-content form .form-group {
+        button.group-title h4 {
+          font-size: 15px;
+        }
+        .input-control {
+          input {
+            // height: ;
+          }
+          .radio-check-div {
+            gap: 10px;
+            label input {
+              width: 13px;
+              height: 13px;
+            }
+          }
+        }
+      }
+      .footer-content button {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+  .offcanvas.add-contact-form-canva {
+    width: 400px;
+    .offcanvas-body {
+      .header-content {
+        h3 {
+          font-size: 16px;
+        }
+        .view-option button {
+          font-size: 13px;
+          svg {
+            font-size: 16px;
+          }
+        }
+      }
+      .main-content form .form-group {
+        button.group-title h4 {
+          font-size: 15px;
+        }
+        .input-control {
+          input {
+            // height: ;
+          }
+          .radio-check-div {
+            gap: 10px;
+            label input {
+              width: 13px;
+              height: 13px;
+            }
+          }
+        }
+      }
+      .footer-content button {
+        font-size: 13px;
+      }
+    }
+  }
+}

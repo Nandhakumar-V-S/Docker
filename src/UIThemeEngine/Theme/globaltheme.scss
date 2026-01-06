@@ -1,0 +1,19 @@
+﻿/*Start theme Global Variables*/
+@import "variable/_variable.scss";
+/*End theme Global Variables*/
+
+/*Start theme third party Styles*/
+@import "../Library/thirdparty/timeline/timeline.css";
+@import "../Library/thirdparty/fullcalendar/library/main.min.css";
+@import "../Library/thirdparty/wijimo/wijmoflexgrid/wijmo-core.min.css";
+@import "../Library/thirdparty/wijimo/wijmoflexgrid/wijmo.min.css";
+@import "../Library/thirdparty/wijimo/wijmoflexgrid/wijmo.theme.material.amber-blue.min.css";
+@import "_wijmo.scss";
+/*End theme third party Styles*/
+
+/*Start Theme Control and Component Styles*/
+@import "_nav.scss";
+@import "_button.scss";
+@import "_form.scss";
+@import "_mixins.scss";
+/*End Theme Control and Component Styles*/

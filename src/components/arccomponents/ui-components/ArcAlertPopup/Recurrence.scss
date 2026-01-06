@@ -1,0 +1,369 @@
+$themefont: "Lexend Deca", sans-serif;
+$themecolor: #12344d;
+// $ArcPrimaryColor: #2f5fc9;
+$ArcPrimaryColor: var(--themecolor);
+$ArcSecondaryColor: #6182ca;
+$ArcPrimaryColorBg: #d7eeff;
+$NavMainHeader: 42px;
+$PageSubHeader: 50px;
+$SubHeader: 50px;
+$With-Filter: 84px;
+$Without-Filter: 41px;
+$Groupby-height: 50px;
+$Pagination-Height: 45px;
+$Box-Shadow-Primary: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+$Border-Color1: rgba(186, 186, 186, 0.2);
+$text-color: #505050;
+$themes: (
+  light: (
+    white: white,
+    black: black,
+  ),
+  dark: (
+    whitecolor: white,
+    blackcolor: black,
+    dark1: #070f1c,
+    dark2: #131927,
+    dark3: rgb(8 21 34),
+    dark4: #0a1929,
+    dark5: #020c16,
+    dark6: #001b36,
+    hovercolor: #bbdcfe,
+    hoverbg: #001e3c,
+    light-text: #b2bac2,
+    light-border: #ebebeb59,
+    b-color: #064d9369,
+    theme-blue: $ArcPrimaryColor,
+    none: none,
+    transparentbg: transparent,
+  ),
+);
+//! @mixin style start
+$colors: #2f5fc9, #26bf94, #5e6ab8, #0091ae, #f5b849, #23b7e5;
+
+.popup-body-content {
+  .popup-header {
+    height: 50px !important;
+    border-bottom: 1px solid #ddd;
+    h3 {
+      color: white;
+      background-color: #2f5fc9;
+      font-size: 23px;
+      font-weight: 400;
+      padding: 10px;
+      font-family: $themefont;
+    //   border: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      line-height: normal;
+      .popup-close {
+        color: #d92644;
+        font-size: 17px;
+        cursor: pointer;
+        .svg{
+            font-size: 17px;
+        }
+      }
+    }
+  }
+  .popup-main-recurrence-popup {
+    height: calc(100vh - 100px);
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    h4 {
+      margin: 0px;
+      padding: 0px;
+      line-height: normal;
+      font-weight: 400;
+      font-size: 16px;
+      font-family: $themefont;
+      border-bottom: 1px solid #ddd;
+    }
+    .recurrence-section {
+      // height: 230px;
+    }
+    .recurrence-options {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      // height: 240px;
+      padding: 12px;
+      .arc-input-control {
+        padding-right: 20px;
+        border-right: 1px solid #ddd;
+        .radio-check-div {
+          height: auto;
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+    }
+    .recurrence-details {
+      padding: 5px;
+      input[type="radio"] {
+        width: 15px;
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        background: #e8e8e8;
+        border: 4px solid #fff;
+        outline: 1px solid #999;
+        border-radius: 50%;
+        height: 16px;
+        width: 16px;
+        font-size: 13px;
+        font-weight: 500;
+        box-shadow: none;
+        &:checked {
+          background: #fff;
+          border: 4px solid var(--themecolor);
+          outline: 2px solid var(--themecolor);
+          outline-offset: -1px;
+        }
+      }
+      .daily-options,
+      .monthly-options,
+      .yearly-options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .option-row {
+          display: flex;
+
+          align-items: center;
+          gap: 10px;
+          font-family: $themefont;
+          line-height: normal;
+          font-size: 14px;
+          font-weight: 300;
+          label {
+            display: flex;
+            gap: 10px;
+            cursor: pointer;
+          }
+          .select-input {
+            height: 30px;
+            border: 1px solid #ddd;
+            font-family: $themefont;
+            font-size: 13px;
+            outline: none;
+            font-weight: 300;
+            .control {
+              border: 1px solid #ddd;
+              box-shadow: none;
+              // min-height: 35px;
+              // height: 35px;
+              font-family: $themefont;
+              font-size: 13px;
+              font-weight: 500;
+              border-radius: 0px;
+              &:hover {
+                border-color: #ddd;
+              }
+            }
+            .value-container{
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
+          }
+        }
+      }
+      .weekly-options {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        .weekly-freq {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-family: $themefont;
+          line-height: normal;
+          font-size: 14px;
+          font-weight: 300;
+          input[type="number"] {
+            width: 40px;
+            height: 30px;
+            border: 1px solid #ddd;
+            outline: none;
+            box-shadow: none;
+            font-family: $themefont;
+            font-size: 13px;
+            font-weight: 400;
+            padding: 0px 10px;
+          }
+        }
+        .weekday-options {
+          .weekday {
+            .arc-input-control {
+              border-right: none !important;
+              .radio-check-div {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+              }
+            }
+          }
+        }
+      }
+    }
+    .recurrence-end-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .recurrence-end-options {
+        font-family: $themefont;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        font-size: 14px;
+        font-weight: 300;
+        gap: 20px;
+        padding: 6px;
+        position: relative;
+        input[type="date"] {
+          display: flex;
+          align-items: center;
+          height: 30px;
+          border: 1px solid #ddd;
+          font-family: $themefont;
+          // padding: 2px;
+          line-height: normal;
+          font-size: 14px;
+          font-weight: 300;
+          padding: 0px 10px;
+          outline: none;
+          box-shadow: none;
+          &:disabled {
+            cursor: no-drop;
+          }
+        }
+        .left-content{
+            display: flex;
+            flex-direction: column;
+            .end-date{
+                display: flex;
+                gap: 5px;
+                .arc-input-control{
+                    display: flex;
+                }
+            }
+        }
+        .start-date {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 30px;
+        }
+        // .end-date {
+        //   position: absolute;
+        //   top: 35px; /* Position it below the start date */
+        //   left: 0;
+        // }
+        .end-options {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .option-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: $themefont;
+            line-height: normal;
+            font-size: 14px;
+            font-weight: 300;
+            input[type="radio"] {
+              width: 15px;
+              cursor: pointer;
+              appearance: none;
+              -webkit-appearance: none;
+              background: #e8e8e8;
+              border: 4px solid #fff;
+              outline: 1px solid #999;
+              border-radius: 50%;
+              height: 16px;
+              width: 16px;
+              font-size: 13px;
+              font-weight: 500;
+              box-shadow: none;
+              &:checked {
+                background: #fff;
+                border: 4px solid var(--themecolor);
+                outline: 2px solid var(--themecolor);
+                outline-offset: -1px;
+              }
+            }
+            label {
+              display: flex;
+              gap: 10px;
+              cursor: pointer;
+            }
+            .select-input {
+              height: 30px;
+              border: 1px solid #ddd;
+              font-family: $themefont;
+              font-size: 13px;
+              outline: none;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+  }
+  .popup-footer {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    gap: 8px;
+    button {
+      width: 100px;
+      border: 1px solid #fff;
+      outline: none;
+      font-family: $themefont;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+      padding: 6px 12px;
+      border-radius: 2px;
+    }
+    .cancel {
+      background: linear-gradient(180deg, #fff 0, #f5f7f9 100%);
+      color: #333;
+      border: 1px solid #cfd7df;
+    }
+    .save {
+      background-color: $ArcPrimaryColor;
+      color: #fff;
+      border: 1px solid $ArcPrimaryColor;
+    }
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  width: 40px;
+  height: 30px;
+  border: 1px solid #ddd;
+  outline: none;
+  box-shadow: none;
+  font-family: $themefont;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 0px 10px;
+  &:disabled {
+    cursor: no-drop;
+  }
+}

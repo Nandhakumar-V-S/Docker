@@ -1,0 +1,167 @@
+﻿@import "./_variable.scss";
+
+.wj-cells .wj-cell.wj-state-selected {
+  background: #f5f5f5 !important;
+  color: $black;
+}
+
+.wj-state-selected,
+.wj-state-last-selected {
+  background: #fdfdfd !important;
+  color: #333;
+}
+
+.wj-glyph-filter {
+  border: 0px;
+  font-size: 20px;
+}
+
+.wj-glyph-filter:after {
+  display: none;
+}
+
+.wijmo-img {
+  border-radius: 50px;
+}
+/*.wj-content{border-radius:5px;}*/
+.wj-cell.wj-header {
+  /* line-height: 31px;*/
+  padding: 6px 10px;
+}
+
+.wj-div {
+  display: flex;
+}
+
+.wj-text {
+  width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0px 7px;
+}
+
+.wj-icon-pop i {
+  font-size: 14px;
+  color: $grey-300;
+  margin: 5px 4px;
+}
+
+.wj-icon-pop {
+  margin-top: 0px;
+  display: none;
+}
+
+.wj-content {
+  border: 1px solid #ddd;
+}
+
+.wj-cell.wj-frozen-col {
+  border-right: 1px solid #ededed;
+}
+
+.wj-cell {
+  border-right: 1px solid #ededed;
+  border-bottom: 1px solid #ededed !important;
+}
+
+.wj-colheaders .wj-cell:last-child {
+  border-right: 0px;
+}
+
+.wj-cells .wj-row .wj-cell:last-child {
+  border-right: 0px;
+}
+
+.wj-cells .wj-row:last-child .wj-cell,
+.wj-rowheaders .wj-row:last-child .wj-cell {
+  border-bottom: 0px;
+}
+
+.wj-row:hover .wj-cell {
+  background-color: #f5f5f5 !important;
+}
+
+.wj-rowheaders .wj-row:hover .wj-cell,
+.wj-topleft .wj-row:hover .wj-cell,
+.wj-colheaders .wj-row:hover .wj-cell {
+  background-color: unset !important;
+}
+
+.wj-ico-bor {
+  background-color: #a094ed;
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 1px;
+  width: 34px;
+  line-height: 23px;
+  text-align: center;
+  height: 38px;
+  padding: 2px;
+  border-radius: 20% !important;
+}
+
+.wj-glyph-down {
+  border-top: 0.5em solid #d2d2d2;
+}
+
+.wj-glyph-up {
+  border-bottom: 0.5em solid #d2d2d2;
+}
+
+.wj-cell.wj-header {
+  color: $black !important;
+}
+
+.isc-schedule {
+  padding: 5px 0px;
+  border-radius: 5px;
+}
+
+.wj-cell.wj-alt {
+  background-color: transparent;
+}
+
+.wj-text {
+  color: $ArcPrimaryColor;
+}
+
+.wj-control * {
+  font-size: 13px !important;
+  font-weight: $font-weight-large;
+}
+
+.isc-status {
+  color: $green;
+}
+
+.wj-cell:hover .wj-icon-pop {
+  display: block !important;
+}
+/*.wj-cell{height:40px !important}*/
+.wj-cells .wj-cell.wj-state-multi-selected {
+  background-color: #f5f5f5 !important;
+  color: unset;
+}
+
+.wj-control.wj-content.wj-dropdown,
+.wj-control.wj-content.wj-inputnumber,
+.wj-control.wj-content.wj-inputmask {
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.wj-rowheaders .wj-row .wj-cell {
+  border-right: 0px;
+}
+
+.wj-topleft .wj-row .wj-cell {
+  border-right: 0px;
+}
+
+.wj-colheaders .wj-cell:first-child {
+  padding: 6px 0px;
+}
+
+.wj-cells .wj-cell:first-child {
+  padding: 6px 4px;
+}

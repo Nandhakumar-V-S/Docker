@@ -1,0 +1,86 @@
+@import "./main.scss";
+
+.not-found {
+  padding: 100px 0px;
+  background-color: #f6f7fb;
+  @include themed() {
+    background-color: t("transparentbg");
+  }
+  h3 {
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
+    font-family: $themefont;
+    font-weight: 700;
+    font-size: 60px;
+    letter-spacing: 5px;
+    text-align: center;
+    @include themed() {
+      color: t("whitecolor");
+    }
+  }
+  p {
+    color: #000000;
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
+    font-family: $themefont;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 5px;
+    text-align: center;
+    @include themed() {
+      color: t("whitecolor");
+    }
+  }
+  a {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    text-transform: capitalize;
+    text-align: center;
+    background-color: $themecolor;
+    color: #fff;
+    font-family: $themefont;
+    padding: 5px 20px;
+    line-height: inherit;
+    border-radius: 5px;
+    -webkit-transition: background-color 0.25s linear, color 0.4s ease-in-out;
+    transition: background-color 0.25s linear, color 0.4s ease-in-out;
+    text-decoration: none;
+    margin: 20px auto 0px auto;
+    width: fit-content;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      background-color: #000;
+      z-index: -1;
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+      border-radius: inherit;
+      @include themed() {
+        background-color: t("whitecolor");
+      }
+    }
+    &:hover {
+      color: #fff;
+      background-color: #000;
+      @include themed() {
+        background-color: t("whitecolor");
+        color: t("blackcolor");
+      }
+    }
+    &:hover::before {
+      width: 100%;
+    }
+  }
+}

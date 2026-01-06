@@ -1,0 +1,26 @@
+@import "@/style/arcstyle/main.scss";
+
+.addleadform-loading {
+  .react-loading-skeleton {
+    line-height: inherit;
+  }
+  .sidebar-div {
+    ul {
+      li {
+        span {
+          line-height: normal;
+        }
+      }
+    }
+  }
+  .lead-form-div {
+    .form-section {
+      h4.section-title {
+      }
+      span.input-div {
+        margin: 10px 0px;
+        display: block;
+      }
+    }
+  }
+}

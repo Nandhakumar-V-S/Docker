@@ -1,0 +1,59 @@
+{
+  "Task": {
+    "Title": { "title": "Title", "tooltip": "Title", "icon": "" },
+    "DueDate": { "title": "DueDate", "tooltip": "Due Date", "icon": "" },
+    "Assignedto": {
+      "title": "AssignedTo",
+      "tooltip": "Assigned To",
+      "icon": ""
+    },
+    "Owner": { "title": "Owner", "tooltip": "Updated By", "icon": "" },
+    "ModifiedOn": {
+      "title": "ModifiedOn",
+      "tooltip": "Updated On",
+      "icon": ""
+    }
+  },
+  "Project": {
+    "Title": { "title": "Title", "tooltip": "Title", "icon": "" },
+    "DueDate": { "title": "DueDate", "tooltip": "Due Date", "icon": "" },
+    "Assignedto": {
+      "title": "Assignedto",
+      "tooltip": "Assigned To",
+      "icon": ""
+    },
+    "Createdby": {
+      "title": "Createdby",
+      "tooltip": "Updated By",
+      "icon": ""
+    },
+    "ModifiedOn": {
+      "title": "ModifiedOn",
+      "tooltip": "Updated On",
+      "icon": ""
+    }
+  },
+  "FollowUp": {
+    "Title": { "title": "Title", "tooltip": "Title", "icon": "" },
+    "DueDate": {
+      "title": "Folloupdate",
+      "tooltip": "Followup date",
+      "icon": ""
+    },
+    "Assignedto": {
+      "title": "AssignedTo",
+      "tooltip": "Assigned To",
+      "icon": ""
+    },
+    "Createdby": {
+      "title": "Createdby",
+      "tooltip": "Updated By",
+      "icon": ""
+    },
+    "ModifiedOn": {
+      "title": "ModifiedOn",
+      "tooltip": "Updated On",
+      "icon": ""
+    }
+  }
+}

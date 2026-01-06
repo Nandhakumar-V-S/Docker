@@ -1,0 +1,105 @@
+﻿// Default-Color
+$white: #ffffff !default;
+$black: #333333 !default;
+$transparent: transparent !default;
+
+// Grey-Colors
+$grey: #ced4da !default
+$grey-100: #ced4da !default;
+$grey-200: #b1aeae !default;
+$grey-300: #959799 !default;
+$grey-400: #5c636a !default;
+
+// Red-Colors
+$red: #f73e3e !default;
+$red-100: #f73e3e !default;
+$red-200: #dd2335 !default;
+$red-300: #dc3545 !default;
+$red-400: #bf0416 !default;
+
+// Blue-Colors
+$blue: #0088dd !default;
+$blue-100: #0088dd !default;
+$blue-200: #0b5ed7 !default;
+$blue-300: #0d6efd !default;
+$blue-400: #1786a7 !default;
+
+// Green-Colors
+$green: #51b92f !default;
+$green-100: #51b92f !default;
+$green-200: #1dbd73 !default;
+$green-300: #2aa70b !default;
+$green-400: #198754 !default;
+
+// Orange-Colors
+$orange: #f6661d !default;
+$orange-100: #f6661d !default;
+$orange-200: #f7a31e !default;
+$orange-300: #f7952a !default;
+$orange-400: #e9b109 !default;
+
+// Special-Colors
+$purple: #b134a7 !default;
+$yellow: #ffda55 !default;
+$pink: #ff58dd !default;
+$brown: #6c3511 !default;
+$head: #12344D !default;
+/*Theme Font-Size Variables*/
+$font-size-default: 14px !default;
+$font-size-small: 1rem !default;
+$font-size-medium: 1.25rem !default;
+$font-size-large: 1.5rem !default;
+$font-size-xlarge: 1.75rem !default;
+$font-size-xxlarge: 2rem !default;
+
+/*Theme Font-Weight Variables*/
+
+$font-weight-default: 300!default;
+$font-weight-small: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-large: 600 !default;
+
+/*Theme Padding Variables*/
+$input-btn-padding-y: .375rem !default;
+$input-btn-padding-x: .75rem !default;
+
+
+$btn-padding-y: $input-btn-padding-y !default;
+$btn-padding-x: $input-btn-padding-x !default;
+
+/*Form Label Variables */
+$form-label-margin-bottom: .5rem !default;
+$form-label-color: $black;
+
+/*Form Input Variables */
+$input-padding-y: $input-btn-padding-y !default;
+$input-padding-x: $input-btn-padding-x !default;
+
+/*Form Check/Radio Variables */
+$input-check-width: $font-size-default !default;
+$input-check-height: $font-size-default !default;
+
+/*Form Select Variables */
+$form-select-padding-y: $input-btn-padding-y !default;
+$form-select-padding-x: $input-btn-padding-x !default;
+$form-select-font-size: $font-size-default !default;
+$form-select-color:$black !default;
+$form-select-weight: $font-weight-small !default;
+$form-select-bgcolor: $white !default;
+
+/*Form text Variables */
+$form-text-color: $grey !default;
+$form-text-font-weight: $font-weight-default !default;
+$form-text-size: $font-size-default !default;
+
+/* Input-group-variables */
+$input-group-addon-color: $grey !default;
+$input-group-addon-font-size: $font-size-default !default;
+
+/*KPI-variables*/
+$kpi-bg-color: $grey !default;
+$kpi-color: $white !default;
+$kpi-text-color: $kpi-color !default;
+$kpi-font-weight: $font-weight-large !default;
+$kpi-font-size: $font-size-default !default;
+$kpi-font-size-count: $font-size-xxlarge !default;

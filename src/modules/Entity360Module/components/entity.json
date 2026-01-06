@@ -1,0 +1,53 @@
+{
+  "entityid_apiname": "id",
+  "shortname_apiname": "displayname",
+  "primaryname_apiname": "displayname",
+  "secondaryname_apiname": "displayname",
+  "descriptionname_apiname": "description",
+  "basicinfo": [
+    {
+      "api_name": "displayname",
+      "icontype": "text"
+    },
+    {
+      "api_name": "entitytype_text",
+      "icontype": "text"
+    }
+  ],
+  "additionalinfo": [
+    {
+      "api_name": "entitytype_text",
+      "labeltext": "Entity Type"
+    },
+    {
+      "api_name": "category_text",
+      "labeltext": "Category"
+    },
+    {
+      "api_name": "subcategory_text",
+      "labeltext": "Sub Category"
+    }
+  ],
+  "Generalinfo": [
+    {
+      "api_name": "utbl_Workitem_column16",
+      "labeltext": "Task Name"
+    },
+    {
+      "api_name": "utbl_Workitem_column41_text",
+      "labeltext": "Project Name"
+    },
+    {
+      "api_name": "utbl_Workitem_column3_text",
+      "labeltext": "Chunk Name"
+    },
+    {
+      "api_name": "utbl_Workitem_column6_text",
+      "labeltext": "Priority"
+    },
+    {
+      "api_name": "utbl_Workitem_column10_text",
+      "labeltext": "Owner"
+    }
+  ]
+}

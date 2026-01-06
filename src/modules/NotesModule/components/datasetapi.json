@@ -1,0 +1,16 @@
+ {
+ "entityid": "1000",
+ "entity": "lead",
+ "entityData": [
+    {"datasetid": "2000", "title": "All Leads", "isdefault": true, "isselected": false},
+    {"datasetid": "2001", "title": "My Leads", "isdefault": false, "isselected": true},
+    {"datasetid": "2002", "title": "Sample Data", "isdefault": true, "isselected": false},
+    {"datasetid": "2003", "title": "Test Data", "isdefault": false, "isselected": false},
+    {"datasetid": "2004", "title": "Another Set", "isdefault": true, "isselected": false},
+    {"datasetid": "2005", "title": "Random Leads", "isdefault": false, "isselected": false},
+    {"datasetid": "2006", "title": "Data Entry", "isdefault": true, "isselected": false},
+    {"datasetid": "2007", "title": "New Leads", "isdefault": false, "isselected": false},
+    {"datasetid": "2008", "title": "More Data", "isdefault": true, "isselected": false},
+    {"datasetid": "2009", "title": "Final Set", "isdefault": false, "isselected": false}
+  ]
+ }

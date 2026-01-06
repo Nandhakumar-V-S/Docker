@@ -1,0 +1,59 @@
+@import "./main.scss";
+
+.checkbox-wrapper-54 input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.checkbox-wrapper-54 *,
+.checkbox-wrapper-54 ::after,
+.checkbox-wrapper-54 ::before {
+  box-sizing: border-box;
+}
+
+/* The slider */
+.checkbox-wrapper-54 .slider {
+  background-color: $themecolor;
+  transition: 0.4s;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  img {
+    width: 20px;
+  }
+  svg {
+    font-size: 20px;
+    color: #ffffff;
+  }
+  span.theme-name {
+    color: #ffffff;
+    font-family: $themefont;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  @media only screen and (min-width: 992px) {
+    span.theme-name {
+      display: none;
+    }
+  }
+}
+
+.checkbox-wrapper-54 input:checked + .slider {
+  background-color: $themecolor;
+  svg {
+    color: #ffffff;
+  }
+}
+
+.theme-btn {
+  z-index: 9;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  left: auto;
+  top: auto;
+}

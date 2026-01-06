@@ -1,0 +1,110 @@
+[
+  {
+    "id": "59dcbe68-2646-4206-b758-089ac964c539",
+    "name": "Attribute Name",
+    "lablekey": "attr-name-lbl",
+    "columnwidth": 150,
+    "seqno": 1,
+    "api_name": "DisplayName",
+    "visible": true,
+    "displayapiname": "DisplayName",
+    "istitle": true,
+    "isdate": false
+  },
+  {
+    "id": "f3dc970c-2cbe-4d0f-9438-c12fd6f9090c",
+    "name": "Filter",
+    "lablekey": "att-islookup-lbl",
+    "columnwidth": 150,
+    "seqno": 2,
+    "api_name": "isfilterable",
+    "visible": true,
+    "displayapiname": "isfilterable",
+    "istitle": false,
+    "isdate": false
+  },
+  {
+    "id": "f5a2a128-1f1c-4b5d-b8da-33387ace3172",
+    "name": "Group By",
+    "lablekey": "att-isgrpby-lbl",
+    "columnwidth": 150,
+    "seqno": 3,
+    "api_name": "isvalidforgroupby",
+    "visible": true,
+    "displayapiname": "isvalidforgroupby",
+    "istitle": false,
+    "isdate": false
+  },
+  {
+    "id": "6ed29c44-27a7-4a43-a17b-25d9a03f4044",
+    "name": "List",
+    "lablekey": "att-isvalidforgrid-lbl",
+    "columnwidth": 150,
+    "seqno": 4,
+    "api_name": "isvalidforgrid",
+    "visible": true,
+    "displayapiname": "isvalidforgrid",
+    "istitle": false,
+    "isdate": false
+  },
+  {
+    "id": "dc955286-4180-496b-8ff3-f06a1359d02e",
+    "name": "Option Set",
+    "lablekey": "att-optionset-lbl",
+    "columnwidth": 150,
+    "seqno": 5,
+    "api_name": "optionsetid",
+    "visible": true,
+    "displayapiname": "optionsetid_text",
+    "istitle": false,
+    "isdate": false
+  },
+  {
+    "id": "36162537-fc88-48c9-ba2f-e0bf0e405086",
+    "name": "Lookup",
+    "lablekey": "att-lookup-lbl",
+    "columnwidth": 150,
+    "seqno": 6,
+    "api_name": "lookupentity",
+    "visible": true,
+    "displayapiname": "lookupentity_text",
+    "istitle": false,
+    "isdate": false
+  },
+  {
+    "id": "f61700d9-1771-4046-ae91-a89df9805f5c",
+    "name": "Field Type",
+    "lablekey": "att-fieldtype-lbl",
+    "columnwidth": 150,
+    "seqno": 7,
+    "api_name": "controltype",
+    "visible": true,
+    "displayapiname": "controltype_text",
+    "istitle": false,
+    "isdate": false
+  },
+  {
+    "id": "a69a2d0d-51f8-40d6-ba74-de179764ab4c",
+    "name": "Attribute Id",
+    "lablekey": "attr-id-lbl",
+    "columnwidth": 150,
+    "seqno": 19,
+    "api_name": "ID",
+    "visible": false,
+    "displayapiname": "ID",
+    "istitle": false,
+    "isdate": false
+  },
+  {
+    "id": "d2242a2d-a71b-4c85-9aa8-6bcf2daf28da",
+    "name": "Column Type",
+    "lablekey": "att-type-lbl",
+    "columnwidth": 150,
+    "seqno": 21,
+    "api_name": "attributedatatype",
+    "visible": true,
+    "displayapiname": "attributedatatype_text",
+    "istitle": false,
+    "isdate": false
+  }
+]

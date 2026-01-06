@@ -1,0 +1,175 @@
+@import "@/style/arcstyle/main.scss";
+
+.detail-statusbar {
+  $statuscolor: $ArcPrimaryColor;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .RSPBprogressBar {
+    margin: 50px 0px 60px 0px;
+    background-color: #dedddf;
+    width: 85%;
+    .RSPBstep {
+      &:nth-child(even) {
+        .indexedStep {
+          p {
+            // color: red;
+            bottom: 45px;
+          }
+          &.accomplished {
+            .dropdown {
+              bottom: 40px;
+            }
+          }
+        }
+      }
+      .indexedStep {
+        color: $statuscolor;
+        width: 24px;
+        height: 24px;
+        font-size: 20px;
+        box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 16%);
+        background-color: #ffffff;
+        position: relative;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 3px;
+        span {
+          text-align: center;
+          white-space: nowrap;
+          display: flex;
+        }
+        p {
+          position: absolute;
+          bottom: -36px;
+          color: #939393;
+          font-family: $themefont;
+          font-weight: 500;
+          font-size: 14px;
+          text-align: center;
+          white-space: nowrap;
+          display: flex;
+          margin: 0px;
+        }
+        &.accomplished {
+          background-color: #ffffff;
+          span {
+            color: $statuscolor;
+          }
+          p {
+            color: $statuscolor;
+          }
+          .dropdown {
+            button.dropdown-toggle {
+              color: $statuscolor;
+            }
+          }
+
+          &.animation {
+            border-radius: 50px 50px 50px 50px;
+            p {
+              display: none;
+            }
+            .dropdown {
+              border-color: $statuscolor;
+              button.dropdown-toggle {
+                // color: $statuscolor;
+              }
+            }
+            &::after,
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 24px;
+              height: 24px;
+              background: $statuscolor;
+              border-radius: 50%;
+              z-index: -1;
+              animation: grow 1s ease-in-out infinite;
+            }
+            &::after {
+              background: $statuscolor;
+              &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                background: $statuscolor;
+                border-radius: 50%;
+                z-index: -1;
+                animation: grow 1s ease-in-out infinite;
+              }
+            }
+            &::before {
+              background: $statuscolor;
+              animation-delay: -0.5s;
+            }
+            @keyframes grow {
+              0% {
+                transform: scale(0.8, 0.8);
+                opacity: 1;
+              }
+              100% {
+                transform: scale(1.8, 1.8);
+                opacity: 0;
+              }
+            }
+          }
+          .dropdown {
+            // border: 1px solid #ddd;
+            border-color: $statuscolor;
+            background-color: $statuscolor;
+            padding: 2px;
+            bottom: -40px;
+            z-index: 1;
+            border-radius: 5px;
+            position: absolute;
+            button.dropdown-toggle {
+              padding: 0px 5px;
+              width: auto;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              border: none;
+              outline: none;
+              box-shadow: none;
+              background-color: transparent;
+              font-family: $themefont;
+              font-size: 14px;
+              font-weight: 500;
+              color: #fff;
+              border-radius: 5px;
+            }
+            .dropdown-menu {
+              padding: 5px;
+              margin-top: 3px;
+              .dropdown-item {
+                font-family: $themefont;
+                font-size: 14px;
+                border-radius: 0px;
+                font-weight: 500;
+                padding: 5px;
+                &:hover {
+                  background-color: $statuscolor;
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .RSPBprogression {
+      background: $statuscolor;
+    }
+  }
+}
