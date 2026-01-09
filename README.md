@@ -1,8 +1,34 @@
-# React + Vite
+First step create an docker ignore file
+name as .dockerignore
+in that file add these things
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Create docker ignore file	
+node_modules	
+dist	
+.git	
+.gitignore	
+Dockerfile	
+README.md	
 
-Currently, two official plugins are available:
+then create Dockerfile in vscode
+in vscode nmae the file as Dockerfile
+in that file add these things
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Create Dockerfile	
+FROM node:18	
+WORKDIR /app	
+COPY package*.json ./	
+RUN npm install	
+COPY . .	
+EXPOSE 3000	
+CMD ["npm", "run", "dev", "--", "--host"]	
+
+then => in the command prompt
+build the docker image => docker build -t web_react .
+
+after create image change the image as container
+in command prompt go to file path then change as container
+docker run -p 3000:3000 --name=react_container web_react
+
+then run the port in localhost
+localhost:3000
